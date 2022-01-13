@@ -1,0 +1,38 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; 
+    font-weight: 900;
+}
+
+/* # selezione by tag */
+h1 {
+    color:aqua;
+}
+
+h3{
+    color: pink;
+}
+
+
+/* . selezione by class */
+/* .class */
+.article{
+    color: rgb(0, 132, 255);
+}
+
+
+/* # selezione by id */
+#primo-paragrafo{
+    color: rgb(0, 255, 42);
+    text-align: center;
+}
+
+#testing-div-parent{
+    height: 400px;
+    background-color: silver;
+}
+
+#testing-div{
+    background-color: red;
+}
