@@ -1,0 +1,43 @@
+
+/* Selezione by tag che assegna all'header
+un colore di sfondo e l'allineamento testuale centrato */
+header{
+    background-color: rgb(224, 224, 224);
+    text-align: center;
+}
+
+/* Selezione by tag che assegna a tutti gli h3 uno stile corsivo (italic) */
+h3{
+    font-style: italic;
+}
+
+/* Selezione by class che assegna il colore goldenrod a tutti gli elementi con la classe seguente */
+.item-title{
+    color: goldenrod;
+}
+
+/* 
+    Classe condivisa (come dovrebbero essere tutte le classi)
+    per aggiungere un bordo "solido" di 3px in fondo al blocco a cui 
+    è applicata
+ */
+.border-bottom-golden{
+    border-bottom: 3px solid goldenrod;
+}
+
+/* Selezione by id per applicare sfondi di diverso colore alle varie sezioni */
+
+#experience{
+    background-color: greenyellow;
+}
+
+#education{
+    background-color: rgb(255, 0, 179);
+}
+
+#interests{
+    background-color: rgb(0, 255, 255);
+}
+
+
+
