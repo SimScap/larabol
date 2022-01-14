@@ -1,0 +1,64 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 85%;
+    height: 200px;
+    margin: 0 auto;
+    /* background-color: grey;
+    border: 2px solid black;
+    margin-bottom: 15px; */
+}
+
+.main-logo{
+    height: 100px;
+    vertical-align: middle;
+}
+
+.logo-text{
+    color: white;
+    font-size: 1.9em;
+
+}
+
+.header-unread{
+    margin-top: 10px;
+    color:white;
+    font-size: 1.6em;
+}
+
+.unread-count{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.email-row{
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.unread{
+    background-color: white;
+}
+
+.read{
+    background-color: lightgray;
+}
+
+.mail-subject{
+    color: black;
+    font-weight: bold;
+}
+
+.mail-preview{
+    color: gray;
+}
