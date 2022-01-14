@@ -1,0 +1,74 @@
+/* RESET 
+    - stabilisco come box-sizing border-box
+    - azzero tutti i margini in ogni direzione
+    - azzero tutti i padding in ogni direzione
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 5px;
+}
+
+img{
+    width: 300px;
+}
+
+.test-container{
+    width: 50%;
+    border: 2px solid brown;
+    border-bottom-left-radius: 20px;
+}
+
+.test-container-padding{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    /* Shorthand per tutti i valori */
+    padding: 10px;
+
+    /* Shorthand per top/bottom e per right/left */
+    padding: 10px 30px;
+
+    /* Shorthand per top, left/right, e bottom */
+    padding: 10px 30px 20px;
+
+    width: 33%;
+    border: 1px solid blue;
+    
+}
+
+.test-container-heavy-padding{
+    padding: 50px;
+    width: 33%;
+    border: 1px solid aqua;
+}
+
+.test-margin{
+    width: 200px;
+    height: 300px;
+    background-color: aquamarine;
+    color: white;
+    padding: 15px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: beige;
+}
+
+.test-first-margin{
+    margin: 10px;
+    background-color: darkturquoise;
+}
+
+.test-second-margin{
+    margin: 0 20px;
+    background-color: deeppink;
+}
