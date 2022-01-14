@@ -1,0 +1,68 @@
+
+header{
+    height: 110px;
+    background-color: cornflowerblue;
+    background-image: url("../img/pattern.png");
+    background-size: 35%;
+}
+
+table{
+    text-align: left;
+}
+
+thead{
+    background-color: #20a9e5;
+    color: white;
+}
+
+h3{
+    padding: 10px;
+}
+
+.main-logo{
+    margin-top: 50px;
+    height: 50px;
+}
+
+.author{
+    font-size: 18px;
+}
+
+.author-name{
+    color: #20a9e5;
+}
+
+.font-small{
+    font-size: 12px;
+}
+
+.text-gray{
+    color: gray;
+}
+
+.highlight-yellow{
+    background-color: yellow;
+}
+
+.row-bg-light-blue{
+    background-color: #b1e5f2;
+}
+
+.half-width{
+    width: 50%;
+}
+
+.footer-image{
+    width: 200px;
+    height: 170px;
+    color:white;
+    background-size: cover;
+}
+
+#image-monitor{
+    background-image: url("../img/monitor.jpg");
+}
+
+#image-graph{
+    background-image: url("../img/graph.jpg");
+}
