@@ -5,6 +5,82 @@
     padding: 0;
 }
 
+div{
+    border: 5px solid red;
+}
+
+/* !! Seleziono tutti i div e tutti i p  */
+div, p{
+    color: black;
+}
+
+/* Seleziono tutti i p che sono figli di un div */
+div p{
+    color: red;
+}
+
+h1, h2{
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline; 
+    color: #ff00ff; 
+}
+
+a:focus {
+    color: #00c3ff; 
+}
+
+a:active {
+    color: #2f00ff; 
+    font-size: 3em;
+}
+
+a:visited {
+    color: mediumaquamarine;
+}
+
+h2::before {
+    content: "✰";
+    font-size: 3rem;
+}
+
+/* ?? Seleziono tutti i div che hanno una classe "box"  */
+div.box{
+    color: black;
+}
+
+.box.box-uno{
+    border-color: lightseagreen;
+}
+
+.container{
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: khaki;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 2em;
+    padding: 30px;
+    margin-left: 50px;
+}
+
+.box-uno{
+    background-color: lawngreen;
+    margin-bottom: 20px;
+}
+
+.box-due{
+    background-color: lightcoral;
+    margin-top: 30px;
+}
+
+
 body{
     padding: 60px;
 }
@@ -40,3 +116,5 @@ div>strong{
     background: url('https://c.tenor.com/Pv85qbz5OaoAAAAC/the-great-gatsby-leonardo-di-caprio.gif') ;
     background-repeat: no-repeat;
 }
+
+/*
