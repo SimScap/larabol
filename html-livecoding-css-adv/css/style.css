@@ -1,0 +1,42 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 60px;
+}
+
+h1.title{
+    color:red;
+}
+
+input[type="submit"]{
+    color:mediumspringgreen;
+    padding: 10px;
+    background-color: midnightblue;
+}
+
+div p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div>strong{
+    font-family: monospace;
+    color:midnightblue;
+}
+
+#img-ambigua{
+    background: url('http://www.gattodiario.com/wp-content/uploads/2019/07/ehi-taxi.jpeg');
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 300px;
+}
+
+#img-ambigua:hover{
+    border: 2px solid red;
+    background: url('https://c.tenor.com/Pv85qbz5OaoAAAAC/the-great-gatsby-leonardo-di-caprio.gif') ;
+    background-repeat: no-repeat;
+}
