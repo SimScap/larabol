@@ -73,6 +73,10 @@ h1{
     display: inline-block;
 }
 
+#box-esterno-uno{
+    bottom: 0;  
+    left:400px; 
+}
 
 #box-esterno{
     bottom: 0;   
