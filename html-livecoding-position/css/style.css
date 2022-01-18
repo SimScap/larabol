@@ -1,0 +1,88 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 2em;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: cadetblue;
+
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.box-small{
+    height: 50px;
+    width: 50px;
+}
+
+.box-medium{
+    height: 150px;
+    width: 150px;
+}
+
+.box-large{
+    height: 400px;
+    width: 400px;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-violet{
+    background-color: blueviolet;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+
+#box-esterno{
+    bottom: 0;
+    left:400px;   
+}
+
+#box-eremita{
+    top: 0;
+    right: 0;
+}
+
+
+#top-menu{
+    height: 60px; /* altezza del contenuto */
+    width: 100%; /* larghezza del contenuto */
+    background-color: aqua; 
+    position: fixed; /* posizionamento fisso rispetto alla viewport */
+    top:0;
+}
+
+#main-title{
+    /* padding-top:60px; */
+}
