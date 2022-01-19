@@ -62,17 +62,20 @@ main{
 }
 
 .menu{
-    width: calc((30% - 10px) / 2);
-    height: 300px;
+    width: calc((100% / 3) - 10px);
+    /* height: 300px; */
     background-color: blue;
     float: left;
 }
 
 .main{
-    width: calc(70% - 10px);
+    width: calc(100% / 3);
     background-color: rgb(255, 0, 128);
     float: left;
-    margin: 0 10px 20px 10px;
+    
+    margin: 0 10px 20px;
+    /* Shorthand di questo */
+    /* margin: 0 10px 20px 10px; */
 }
 
 .header{
