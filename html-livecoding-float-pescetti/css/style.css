@@ -1,0 +1,29 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+img{
+    width: 300px;
+}
+
+.container{
+    background-image: url("../img/sea-bg.jpg");
+    background-size: contain;
+}
+
+#image-shark{
+    float: left;
+}
+
+#image-salmon{
+    float: right;
+}
