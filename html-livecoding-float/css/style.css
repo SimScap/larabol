@@ -1,0 +1,91 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+/* Live coding 1 */
+
+/* 
+.container{
+    background-color: mediumaquamarine;
+} */
+
+
+/* 
+.fl-left{
+    float: left;
+}
+
+.fl-right{
+    float: right;
+} */
+
+/* .blue{
+    height: 200px;
+    width: 200px;
+    float: left;
+    padding: 10px;
+    color: white;
+    background-color: blue;
+}
+
+.pink{
+    height: 220px;
+    width: 220px;
+    float: right;
+    background-color: rgb(255, 0, 98);
+} */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 650px;
+}
+
+.container{
+    padding: 20px;
+}
+
+.menu,
+.main{
+    height: 470px;
+    display: inline-block;
+}
+
+.menu{
+    width: calc((30% - 10px) / 2);
+    height: 300px;
+    background-color: blue;
+    float: left;
+}
+
+.main{
+    width: calc(70% - 10px);
+    background-color: rgb(255, 0, 128);
+    float: left;
+    margin: 0 10px 20px 10px;
+}
+
+.header{
+    float: left;
+    height: 150px;
+    width: 100%;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+
+.footer{
+    height: 150px;
+    float: left;
+    width: 100%;
+    background-color: cyan;
+}
