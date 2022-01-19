@@ -1,0 +1,45 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+    background-color: honeydew;
+}
+
+.row{
+    margin: 40px;
+    text-align: center;
+}
+
+.product{
+    display: inline-block;
+    position: relative;
+}
+
+.discount{
+    background-color: greenyellow;
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.heart{
+    display: none;
+    position: absolute;
+    color:red;
+    font-size: 3rem;
+    bottom:0;
+    z-index: 3;
+}
+
+.product:hover .heart,
+.product:active .heart,
+.product:focus .heart {
+    display: inline;
+}
