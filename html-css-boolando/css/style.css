@@ -1,0 +1,100 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card{
+    padding: 10px;    
+    width: calc((100% / 3) - 4px);
+    display:inline-block;
+}
+
+.card-image{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.card-image img{
+    width: 100%;
+}
+/* 
+.card-image .first-image{
+    display: inline-block;
+} */
+
+.card-image:hover .first-image{
+    display: none;
+} 
+
+.card-image .second-image{
+    display: none;
+}
+
+.card-image:hover .second-image{
+    display: inline-block;
+}
+
+.card-heart{
+    right: 0;
+    top: 20px;
+    font-size: 2rem;
+    padding: 8px 16px;
+    
+    display: inline-block;
+    background-color: white;
+}
+
+.card-promo{
+    left: 0;
+    bottom: 25px;
+}
+
+.card-promo span{
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+.card-discount{
+    background-color: #eb0037;
+}
+
+.card-tag{
+    background-color: #00875a;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.card-text{
+    text-align: left;
+}
+
+.card-product-name{
+    text-transform: uppercase;
+}
+
+.card-text span, 
+.card-text del {
+    font-size: .86rem;
+}
+
+.card-price{
+    color: red;
+    font-weight: bold;
+}
