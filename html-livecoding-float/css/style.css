@@ -13,13 +13,13 @@
 
 /* Live coding 1 */
 
-/* 
+/*
 .container{
     background-color: mediumaquamarine;
 } */
 
 
-/* 
+/*
 .fl-left{
     float: left;
 }
@@ -44,15 +44,36 @@
     background-color: rgb(255, 0, 98);
 } */
 
-main{
+/* main{
+    padding: 20px;
+
+} */
+
+header{
+    /* float: left; */
+    height: 150px;
+    width: 100%;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+
+footer{
+    /* float: left; */
+    height: 150px;
+    width: 100%;
+    background-color: cyan;
+}
+
+
+.container{
     width: 90%;
     margin: 0 auto;
     max-width: 900px;
     min-width: 650px;
 }
 
-.container{
-    padding: 20px;
+header.container{
+    margin: 20px auto;
 }
 
 .menu,
@@ -72,23 +93,9 @@ main{
     width: calc(100% / 3);
     background-color: rgb(255, 0, 128);
     float: left;
-    
+
     margin: 0 10px 20px;
     /* Shorthand di questo */
     /* margin: 0 10px 20px 10px; */
 }
 
-.header{
-    float: left;
-    height: 150px;
-    width: 100%;
-    background-color: yellow;
-    margin-bottom: 20px;
-}
-
-.footer{
-    height: 150px;
-    float: left;
-    width: 100%;
-    background-color: cyan;
-}
