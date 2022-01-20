@@ -6,8 +6,8 @@
 }
 
 .clearfix::after{
-	content: "";
-    display: table;
+	content: ""; /* # Necessario per definizione di pseudo-elemento (before, after, ecc.) */
+    display: table; /*? Necessario per compatibilità con vecchi browser, per gestire la relazione con il contenuto indipendentemente dalle nuove funzionalità */
     clear: both;
 }
 
