@@ -1,0 +1,66 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer{
+    height: 40px;
+    background-color: #8801fe;
+}
+
+.clearfix::after{
+	content: ""; /* # Necessario per definizione di pseudo-elemento (before, after, ecc.) */
+    display: table; /*? Necessario per compatibilità con vecchi browser, per gestire la relazione con il contenuto indipendentemente dalle nuove funzionalità */
+    clear: both; /*§ Non permette che vi siano elementi float(tanti) a sinistra o a destra dell'elemento che dispone di questa proprietà */
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 850px;
+    min-width: 600px;
+}
+
+section#top-menu{
+    height: 140px;
+    background-color: #e579e6;
+    margin: 1rem 0;
+}
+
+section#jumbotron{
+    height: 500px;
+    background-color: #e1d67a;
+    margin-bottom: 1rem;
+}
+
+section#content{
+    background-color: #0086ff;
+    margin-bottom: .5rem;
+}
+
+section#content > header{
+    height: 50px;
+    background-color: #abcfe7;
+}
+
+section#content aside,
+section#content article {
+    height: 300px;
+    background-color: #abcfe7;
+    margin: 1rem 0;
+    float: left;
+}
+
+section#content aside{
+    width: 20%;
+}
+
+section#content article{
+    width: calc(60% - 2rem);
+    margin: 1rem;
+}
+
