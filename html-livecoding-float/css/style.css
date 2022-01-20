@@ -8,7 +8,7 @@
 .clearfix::after{
 	content: ""; /* # Necessario per definizione di pseudo-elemento (before, after, ecc.) */
     display: table; /*? Necessario per compatibilità con vecchi browser, per gestire la relazione con il contenuto indipendentemente dalle nuove funzionalità */
-    clear: both;
+    clear: both; /*§ Non permette che vi siano elementi float(tanti) a sinistra o a destra dell'elemento che dispone di questa proprietà */
 }
 
 /* Live coding 1 */
