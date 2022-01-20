@@ -1,0 +1,63 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after{
+	content: ""; /* # Necessario per definizione di pseudo-elemento (before, after, ecc.) */
+    display: table; /*? Necessario per compatibilità con vecchi browser, per gestire la relazione con il contenuto indipendentemente dalle nuove funzionalità */
+    clear: both; /*§ Non permette che vi siano elementi float(tanti) a sinistra o a destra dell'elemento che dispone di questa proprietà */
+}
+
+header{
+    height: 56px;
+    background-color: aqua;
+    margin-bottom: 30px;
+}
+
+.container{
+    width: 92%;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+
+.float-left{
+    float: left;
+}
+
+section.todays-picks{
+    width: 74%;
+    border-top: 2px black solid;
+    margin-right: 20px;
+}
+
+section.recent-articles{
+    width: calc(26% - 20px);
+    background-color: darkmagenta;
+    border-left: 1px solid magenta;
+    /* height: 800px; */
+}
+
+section.todays-picks .column
+{
+    padding:1rem;
+}
+
+section.todays-picks aside{
+    width: 35%;
+    background-color: chartreuse;
+    height: 900px;
+}
+section.todays-picks article{
+    width: 65%;
+    background-color: cyan;
+    height: 560px;
+}
+
+section.recent-articles article{
+    background-color: darkorange;
+    height: 100px;
+    margin: 10px 0;
+}
