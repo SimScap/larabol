@@ -5,11 +5,24 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 footer{
-    height: 40px;
-    background-color: #8801fe;
+    margin: 2rem;
+    height: 60px;
+    /* background-color: #8801fe; */
+    text-align: center;
 }
+
+
 
 .clearfix::after{
 	content: ""; /* # Necessario per definizione di pseudo-elemento (before, after, ecc.) */
@@ -19,48 +32,147 @@ footer{
 
 
 .container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    max-width: 850px;
+    max-width: 1000px;
     min-width: 600px;
 }
 
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,.2);
+    /* height: 100%;
+    width: 100%; */
+}
+
+.little-radius{
+    border-radius: 12px;
+}
+
+
+.relative{
+    position: relative;
+}
+
+span.love::after{
+    content:"\2764";
+    color: red;
+    font-size: 1.5rem;
+}
+
 section#top-menu{
-    height: 140px;
-    background-color: #e579e6;
-    margin: 1rem 0;
+    margin: 2.2rem 0;
+}
+
+/* #main-logo{
+    margin-bottom: 1rem;
+} */
+
+#main-logo img{
+    height: 60px;
+    padding-right: 20px;
+    border-right: lightgray 1px solid;
+}
+
+#top-menu ul li{
+    list-style-type: none;
+    display:inline;
+    text-transform: uppercase;
+    color: grey;
+    font-size: 1.1rem;
+    margin-right: .7rem;
 }
 
 section#jumbotron{
-    height: 500px;
-    background-color: #e1d67a;
-    margin-bottom: 1rem;
+    /* height: 500px; */
+    /* background-color: #e1d67a; */
+    margin-bottom: 3rem;
+    /* position: relative; */
 }
 
+section#jumbotron img{
+    width: 100%;
+    height: 430px;
+    object-fit: none;
+}
+section#jumbotron .jumbotron-text{
+    color: white;
+    position: absolute;
+    bottom: 4rem;
+    left: 3rem;
+    width: 58%;
+}
+
+section#jumbotron .jumbotron-text h3{
+    font-size: 1.85rem;
+    font-weight: 400;
+}
+
+section#jumbotron .jumbotron-text p{
+    font-size: 1rem;
+}
+
+
 section#content{
-    background-color: #0086ff;
+    /* background-color: #0086ff; */
     margin-bottom: .5rem;
 }
 
-section#content > header{
-    height: 50px;
-    background-color: #abcfe7;
+section#content h4{
+    margin-bottom: 1rem;
 }
+
+section#content > header{
+    margin-bottom: 2.5rem;
+    /* height: 50px;
+    background-color: #abcfe7; */
+}
+
+section#content > header h1{
+    font-size: 2.6rem;
+}
+section#content > header h4{
+    font-size: 1.1rem;
+    font-weight:400;
+    color: grey;
+}
+
 
 section#content aside,
 section#content article {
-    height: 300px;
-    background-color: #abcfe7;
+    /* height: 300px; */
+    /* background-color: #abcfe7; */
     margin: 1rem 0;
     float: left;
 }
 
+
 section#content aside{
-    width: 20%;
+    width: 25%;
 }
 
 section#content article{
-    width: calc(60% - 2rem);
+    width: calc(50% - 2rem);
     margin: 1rem;
+}
+
+section#content img{
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+section#content .img-wrapper{
+    margin-bottom: 1.5rem;
+}
+
+section#content p{
+    color: grey;
+    font-weight: 400;
 }
 

@@ -6,33 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Struttura WP Livecoding</title>
 
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--  Custom style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="container">
         <!-- Logo principale -->
+        <div id="main-logo">
+            <img src="img/logo.png" alt="Main logo for this website">
+        </div>
 
         <!-- Lista di link di navigazione -->
-        <section id="top-menu"></section>
+        <section id="top-menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Editorials</a></li>
+                    <li><a href="#">Environment</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
 
-        <section id="jumbotron"></section>
+        <section id="jumbotron" class="relative">
+
+            <!-- Versione img -->
+            <div class="overlay little-radius"></div>
+            <img class="little-radius" src="img/banner.jpg" alt="Disegno di una ragazza che fa yoga">
+            <div class="jumbotron-text">
+                <h3>Pretium ac placerat dui interdum nunc in eros urna morbi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra nisl rutrum, pretium lectus nec, sagittis dolor. Phasellus eleifend efficitur...</p>
+            </div>
+        </section>
+
+        <!-- <section id="jumbotron">
+            Versione div
+        </section> -->
     </header>
 
     <main class="container">
 
         <!-- Alternativa # 1 : Wasabi -->
         <section id="content" class="clearfix">
-            <header></header>
+            <header>
+                <h1>Leadership</h1>
+                <h4>Fertenum urna a libero tempus</h4>
+            </header>
 
-            <aside></aside>
 
-            <article></article>
+            <aside>
+                <div class="img-wrapper relative">
+                    <div class="overlay little-radius"></div>
+                    <img class="little-radius" src="img/img-1.jpg" alt="Una pianta di soldi">
+                </div>
+                <div>
+                    <h4>Lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum illo reprehenderit, aspernatur beatae architecto vero dolorem at facilis ad, placeat velit porro dolorum molestias alias assumenda ullam? Sint, veniam.</p>
+                </div>
+            </aside>
 
-            <aside></aside>
+            <article class="relative">
+                <div class="img-wrapper relative">
+                    <div class="overlay little-radius"></div>
+                    <img class="little-radius" src="img/banner-2.jpg" alt="Una pianta di soldi">
+                </div>
+                <div>
+                    <h4>Ipsum</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, minus, cum. Laudantium repellendus repellat beatae ex magnam unde sint earum, voluptatibus, vero nulla distinctio, harum dolor iure reprehenderit consectetur magni. Voluptatibus cum sapiente similique sunt mollitia voluptates, molestiae odio atque reiciendis corrupti quae pariatur, ex delectus beatae corporis recusandae minima explicabo totam illo distinctio, quidem fugit dolore? Accusamus est, quaerat? Ratione dolorem consequuntur ab temporibus enim corporis quia et doloribus libero, tenetur dolorum earum veritatis! Saepe provident, quae. Itaque velit deserunt molestiae ullam tenetur quisquam adipisci recusandae, sit fugiat quia. Repellat assumenda asperiores voluptatem ad voluptate alias quos fugit sed possimus, aspernatur a, labore, laboriosam enim aut! Ratione doloribus, unde. Quidem totam, cum in praesentium doloribus nesciunt atque enim commodi. Perspiciatis veritatis commodi quod, quos ducimus exercitationem qui provident vel adipisci eos modi molestias quas debitis, doloribus mollitia sapiente quaerat dignissimos quis unde ea optio autem voluptas corrupti. Distinctio, itaque. </p>
+                </div>
+            </article>
+
+            <aside class="relative">
+                <div class="img-wrapper relative">
+                    <div class="overlay little-radius"></div>
+                    <img class="little-radius" src="img/img-3.jpg" alt="Una pianta di soldi">
+                </div>
+                <div>
+                    <h4>Lorem</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum illo reprehenderit, aspernatur beatae architecto vero dolorem at facilis ad, placeat velit porro dolorum molestias alias assumenda ullam? Sint, veniam.</p>
+                </div>
+            </aside>
         </section>
     </main>
 
-    <footer class="container"></footer>
+    <footer class="container">
+        <span class="love">
+            Designed with
+        </span>
+    </footer>
 
 </body>
 </html>
