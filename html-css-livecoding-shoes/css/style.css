@@ -1,0 +1,90 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Rubik Mono One', sans-serif;
+    min-width: 600px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: 2;
+    /* min-width: 237px; */
+}
+
+header nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    margin: 30px 10px;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 1px 1px 5px darkgray;
+}
+
+header nav ul li a:hover{
+    box-shadow: 1px 1px 12px black;
+}
+
+section{
+    color:yellow;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.relative{
+    position: relative;
+}
+
+.shoe-wrapper{
+    font-size: 3rem;
+    text-align: center;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shoe-wrapper img{
+    width: 100%;
+}
+
+section#superga{
+    background-color: red;
+}
+
+section#hilfinger{
+    background-color: green;
+
+}
+
+section#converse{
+    background-color: yellow;
+    color: green;
+}
+
+
+
