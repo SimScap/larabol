@@ -1,0 +1,80 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Whitney', sans-serif;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    /* position: relative; */
+}
+
+.box-blue{
+    /* position: absolute; */
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    background-color: turquoise;
+    animation-name: patate-al-forno;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.box-blue:hover{
+    background-color: violet;
+    margin-left: 5rem;
+}
+
+.box-red{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: yellowgreen;
+}
+
+@keyframes patate-al-forno {
+    0% {
+        background-color: red;
+        font-size: 4rem;
+        color:yellow;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    10% {
+        background-color: yellow;
+        margin-left: 200px;
+        margin-top: 0px;
+    }
+
+    20% {
+        background-color: blue;
+        margin-left: 200px;
+        margin-top: 200px;
+        font-size: 7rem;
+        color:magenta;
+    }
+
+    30% {
+        background-color: green;
+        margin-left: 0px;
+        margin-top: 200px;
+        font-size: 2rem;
+        color:teal;
+    }
+
+    100% {
+        background-color: red;
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
+}
