@@ -1,0 +1,204 @@
+/* esercizio 1 */
+
+div.well:hover div.ex-1-square {
+    transition-duration: 3s;
+    background-color: red;
+}
+
+/* esercizio 2 */
+
+div.ex-2-square {
+    background-color: red;
+    transition: 2s ease-in-out;
+}
+
+div.ex-2-square:active {
+    width: 100%;
+}
+
+/* esercizio 3 */
+
+.ex-3-square {
+    transition: border-radius .5s ease-out 0.3s;
+}
+
+.ex-3-square:hover {
+    border-radius: 50%;
+}
+
+/* esercizio 4 */
+/*
+.ex-4-square {
+    transition: opacity 2s ease-in-out;
+}
+ */
+.ex-4-square:hover {
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+/*  esercizio 5 */
+
+
+.ex-5-square {
+    transition: 1s;
+}
+
+.ex-5-square:hover {
+    transform: scale(2);
+}
+
+.ex-5-square:active {
+    transform: scale(0.5);
+}
+
+.ex-6-img:hover{
+    filter: grayscale(100%);
+}
+
+.ex-7-img{
+    transition: filter 2s ease-in-out .2s;
+}
+
+.ex-7-img:hover{
+    filter: sepia(100%);
+}
+
+.ex-8-img{
+    transition: 1.5s;
+}
+
+.ex-8-img:hover{
+    border-radius: 15px;
+    filter: sepia(70%) grayscale(40%);
+}
+
+.ex-9-img{
+    transition: 2s;
+}
+
+.ex-9-img:hover{
+    border-radius: 15px;
+    filter: sepia(70%) grayscale(40%);
+    transform: scale(1.5);
+}
+
+.ex-10-icon{
+    /* Il nome dell'animazione, durata, timing-function e il numero di iterazioni */
+    animation: spinning 1s linear infinite;
+}
+
+@keyframes spinning{
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+.ex-11-icon:hover{
+    animation: rotate 2s;
+}
+
+@keyframes rotate{
+    95%{
+        transform: rotate(290deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: twelve-top 2s linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: twelve-bot 2s linear reverse;
+}
+
+@keyframes twelve-top{
+    0%{
+        left: 10%;
+    }
+
+    50%{
+        left:68%;
+    }
+
+    100%{
+        left: 10%;
+    }
+}
+
+@keyframes twelve-bot{
+    0%{
+        right: 20%;
+    }
+
+    50%{
+        right:68%;
+    }
+
+    100%{
+        right: 20%;
+    }
+}
+
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveTopWhiteCompletely 2s linear;
+}
+@keyframes moveTopWhiteCompletely {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: moveBottomWhiteCompletely 2s linear;
+}
+@keyframes moveBottomWhiteCompletely {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
