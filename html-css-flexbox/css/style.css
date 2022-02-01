@@ -1,0 +1,43 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Whitney', sans-serif;
+}
+
+h1,h2,h3, p{
+    margin: 1rem;
+    padding: .5rem;
+}
+
+header{
+    margin: 2% auto;
+    background-color: red;
+    height: 23vh;
+    width: 96%;
+}
+
+.flex-container{
+    display: flex;
+}
+
+header #logo{
+    flex-basis: 60%;
+    font-size: 3.8rem;
+    font-family: serif;
+}
+
+header nav#nav-bar{
+    flex-basis: 40%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+header nav#nav-bar ul li{
+    display: inline;
+    margin-right: 1rem;
+}
