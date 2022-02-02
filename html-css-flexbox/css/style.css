@@ -41,3 +41,35 @@ header nav#nav-bar ul li{
     display: inline;
     margin-right: 1rem;
 }
+
+.flex{
+    display: flex;
+}
+
+.container{
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgb(203, 255, 235);
+    height: 50vh;
+}
+
+div.box{
+    height: 200px;
+    width: 200px;
+    background-color: deeppink;
+    border: 5px lime solid;
+}
+
+div.box h1{
+    font-size: 6rem;
+    margin: auto;
+}
+
+.grow-1{
+    flex-grow: 1;
+}
+
+.grow-2{
+    flex-grow: 2;
+}
