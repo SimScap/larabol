@@ -15,18 +15,14 @@ h1,h2,h3, p{
 } */
 
 header{
-
     height: 10vh;
     color: rgb(90, 90, 90);
 
-    justify-content: space-between;
     text-align: center;
-    align-items: center;
+    justify-content: space-between;
     flex-wrap: nowrap; /* default */
-}
-
-header i{
     font-size: 1.2rem;
+    align-items: center;
 }
 
 .flex-container{
@@ -37,12 +33,60 @@ header i{
     color: #1172ed;
 }
 
+.relative{
+    position: relative;
+}
+
+.flex-all-centered{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.border-r-5{
+    border-radius: 2rem;
+}
+
+.settings{
+    float:right;
+    margin-right: 1rem;
+    color: gray;
+}
+
+
+main{
+    height: 90vh;
+}
+
 div.navbar-link{
     height: 60%;
 }
 
+div.arrow-box{
+    padding: 0.1rem .4rem;
+    border-radius: 2px;
+    background-color: #e8e6ed;
+    margin: 0 .2rem;
+}
+
+div#navbar-search{
+    padding: 0.1rem .4rem;
+    border-radius: 2px;
+    background-color: #e8e6ed;
+    margin: 0 .2rem;
+}
+
+div#navbar-search input{
+    background-color: #e8e6ed;
+    border: none;
+    padding: .2rem;
+}
+
 div#navbar-center{
-    width: 40%;
+    flex-basis: 40%;
     justify-content: space-around;
 }
 
@@ -51,6 +95,90 @@ div#navbar-right{
     color: white;
     padding: 6px;
     border-radius: 6px;
+    margin-right: 1rem;
 }
 
-/* GOLD: ffa500 */
+
+/*
+    GOLD: #ffa500
+    grey: #e8e6ed
+*/
+
+/* flex-item */
+div.main-content{
+    /* margin: auto; barbatrucco valido esclusivamente per un unico elemento */
+    height: 60%;
+    width: 70%;
+    /* background-color: hotpink; */
+}
+
+main section#centered-content{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+main section#centered-content .col{
+    flex-basis: 50%;
+    /* border: 3px solid black; */
+    color: rgb(121, 121, 121);
+}
+
+main section#centered-content .col:first-child{
+    flex-wrap: wrap;
+    padding: 1.2rem;
+}
+
+main section#centered-content .action-box{
+    flex-basis: 50%;
+    font-size: .8rem;
+    /* border: 5px lime dotted; */
+}
+
+main section#centered-content .btn-large{
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 1rem;
+    color:white;
+    margin-bottom: .7rem;
+    background-color: #1172ed;
+}
+
+main section#centered-content .bg-orange{
+    background-color: #ffa500;
+}
+
+
+main section#centered-content .btn-large i{
+    margin: auto;
+    font-size: 2rem;
+}
+
+main #schedule{
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+main #schedule .top-bar{
+
+    text-align: center;
+    height: 30%;
+    background-image: url("../img/sfondo-zoom.png");
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    color:white;
+    font-size: .85rem;
+}
+
+main #schedule .top-bar p:first-child{
+    font-size: 1.7rem;
+}
+
+main #schedule .content{
+    height: 70%;
+    color: rgb(121, 121, 121);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}

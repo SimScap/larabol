@@ -18,10 +18,19 @@
     <body>
         <!-- Flex container -->
         <header class="flex-container">
-            <div id="navbar-left">
-                <i class="fas fa-chevron-left"></i>
-                <i class="fas fa-chevron-right"></i>
-                <input type="text" placeholder="Cerca">
+            <div id="navbar-left" class="flex-container">
+                <div class="arrow-box">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="arrow-box">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+                <div id="navbar-search">
+                    <i class="fas fa-search fa-1x"></i>
+                    <input type="text" placeholder="Cerca">
+                </div>
+
             </div>
 
             <div id="navbar-center" class="flex-container">
@@ -30,16 +39,16 @@
                     <p>Home</p>
                 </div>
                 <div class="navbar-link">
-                    <i class="fas fa-home"></i>
-                    <p>Home</p>
+                    <i class="far fa-comment"></i>
+                    <p>Chattare</p>
                 </div>
                 <div class="navbar-link">
-                    <i class="fas fa-home"></i>
-                    <p>Home</p>
+                    <i class="far fa-clock"></i>
+                    <p>Riunioni</p>
                 </div>
                 <div class="navbar-link">
-                    <i class="fas fa-home"></i>
-                    <p>Home</p>
+                    <i class="far fa-address-book"></i>
+                    <p>Contatti</p>
                 </div>
             </div>
 
@@ -49,7 +58,55 @@
         </header>
 
         <main>
+            <div class="settings">
+                <i class="fas fa-cog"></i>
+            </div>
 
+            <section id="centered-content" class="flex-container">
+                <div class="main-content flex-container">
+                    <div class="flex-container col flex-all-centered">
+                        <div class="action-box flex-container flex-all-centered flex-column">
+                            <div class="btn-large bg-orange flex-container">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <p>Nuova Riunione <i class="fas fa-chevron-down"></i></p>
+                        </div>
+
+                        <div class="action-box flex-container flex-all-centered flex-column">
+                            <div class="btn-large flex-container">
+                                <i class="far fa-plus-square"></i>
+                            </div>
+                            <p>Entra</p>
+                        </div>
+
+                        <div class="action-box flex-container  flex-all-centered flex-column">
+                            <div class="btn-large flex-container">
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <p>Calendario</p>
+                        </div>
+
+                        <div class="action-box flex-container flex-all-centered flex-column">
+                            <div class="btn-large flex-container">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <p>Condividi Schermo</p>
+                        </div>
+
+                    </div>
+                    <div class="col border-r-5" id="schedule">
+                        <div class="top-bar flex-container flex-all-centered">
+                            <div>
+                                <p>12:40</p>
+                                <p>Mercoledì 2 Febbraio</p>
+                            </div>
+                        </div>
+                        <div class="content flex-container flex-all-centered">
+                            <p>Nessuna riunione per oggi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
 
