@@ -75,6 +75,75 @@ img {
 
 /* Esercizio */
 
+.row {
+  width: 100%;
+}
+
+
+
+  /* Su tutti gli schermi la cui dimensione massima è 576px,
+ovvero schermi < 576px applico le seguenti regole css */
+@media screen and (max-width: 768px){
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row{
+    margin-top: 0;
+    padding-top: 1rem;
+  }
+
+  div#lezioni .row{
+    background-color: #ffff53;
+  }
+
+  /* Blocco lezioni mobile */
+  #lezioni .row>.left,
+  #lezioni .row>.right{
+    /* width: 100%; */
+    padding: 1rem;
+  }
+
+
+  /* BLOCCO STEPS mobile */
+  #steps .row{
+    padding: 1rem;
+  }
+
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    width: 100%;
+  }
+
+  /* BLOCCO PERCHE mobile*/
+  #why .row{
+    background-color: #ffff5c ;
+  }
+
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    /* width: 100%; */
+    margin-top: 1rem;
+    padding: .5rem;
+  }
+
+  img{
+    height: 150px;
+    margin-top: .5rem
+  }
+
+}
+
 /* Su tutti gli schermi la cui dimensione massima è 576px,
 ovvero schermi < 576px applico le seguenti regole css */
 @media screen and (max-width: 576px){
@@ -125,7 +194,6 @@ ovvero schermi < 576px applico le seguenti regole css */
     width: 100%;
     margin-top: 1rem;
     padding: .5rem;
-
   }
-
 }
+
