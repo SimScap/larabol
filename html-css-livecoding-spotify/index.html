@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Questa riga è fondamentale per fare si che sia interpretata correttamente
+            la nostra implementazione della responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Font-Awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Montserrat google font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <title>Livecoding Spotify</title>
+    </head>
+    <body>
+        <main>
+            <!-- Main nav-bar laterale -->
+            <nav id="main-navbar" class="col col-left">
+                <section class="nav-top">
+                    <div class="nav-logo">
+                        <img src="img/logo.svg" alt="Spotify logo">
+                    </div>
+
+                    <div class="nav-menu">
+                        <ul class="nav-menu-list">
+                            <li class="active">
+                                <a href="#">
+                                    <img src="img/home.svg" alt="Home vector icon">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/search.svg" alt="Home vector icon">
+                                    <span>Cerca</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/libreria.svg" alt="Home vector icon">
+                                    <span>La tua libreria</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="nav-playlists">
+                        <h3>Playlist</h3>
+                        <a href="#">
+                            <span>Crea Playlist</span>
+                        </a>
+                        <ul class="nav-menu-list">
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="nav-bot">
+                    <div class="download">
+                        <a href="#">
+                            <img src="img/download.svg" alt="Download icon">
+                            Installa App
+                        </a>
+                    </div>
+                    <div class="user">
+                        <div class="user-avatar">
+                            <img src="img/profile.svg" alt="Profile (user) icon">
+                        </div>
+                        <span>John Doe</span>
+                    </div>
+                </section>
+            </nav>
+
+            <section class="col col-right">
+                <div id="call-to-action"></div>
+                <div id="main-content-nav">
+                    <ul class="inline-list">
+                        <li><a href="#" class="active">IN EVIDENZA</a></li>
+                        <li><a href="#">PODCAST</a></li>
+                        <li><a href="#">CLASSIFICHE</a></li>
+                        <li><a href="#">GENERI E MOOD</a></li>
+                        <li><a href="#">NUOVE USCITE</a></li>
+                        <li><a href="#">SCOPRI</a></li>
+                    </ul>
+                </div>
+
+                <section id="albums">
+                    <h2>Recently played</h2>
+                    <section id="recently-played">
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                        <div class="album-item">
+                            <div class="cover-image">
+                                <img src="img/metal_lifting.jpg" alt="Metal album covers">
+                                <!-- <i></i> -->
+                            </div>
+                            <div class="cover-description">
+                                <h3>Heavy Metal</h3>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+
+                    </section>
+                </section>
+
+            </section>
+        </main>
+
+
+        <footer id="player">
+            <section class="player-album">
+                <div>Imm</div>
+                <div>Sinister</div>
+                <div><3</div>
+                <div>Q</div>
+            </section>
+
+            <section class="player-controller">
+                <div>Lorem ipsum dolor sit amet.</div>
+                <div class="player-bar-wrapper">
+                    <div>0:44</div>
+                    <div class="player-bar">
+                        <div class="music-elapsed-time"></div>
+                    </div>
+                    <div>3:77</div>
+                </div>
+            </section>
+
+            <section class="player-fader">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>Icona lunga</div>
+            </section>
+        </footer>
+    </body>
+</html>
