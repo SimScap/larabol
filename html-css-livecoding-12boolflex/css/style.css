@@ -1,0 +1,16 @@
+/*  ? Non effettuare mai reset in caso di importazione di librerie
+    ? o framework che siamo consapevoli facciano già altrettanto. */
+
+body{
+    font-family: 'Montserrat';
+}
+
+.box-riempitore{
+    width: 100%;
+    height: 100px;
+    background-color: magenta;
+}
+
+.giallo{
+    background-color: rgb(251, 255, 0);
+}
