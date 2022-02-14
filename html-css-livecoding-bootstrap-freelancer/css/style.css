@@ -1,0 +1,16 @@
+header svg{
+    height: 2rem;
+}
+
+.my-bg-red{
+    background-color: red;
+}
+
+
+.my-bg-magenta{
+    background-color: magenta;
+}
+
+.my-bg-reddit{
+    background-color: rgb(218, 224, 230);
+}
