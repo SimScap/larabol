@@ -1,0 +1,50 @@
+
+header{
+    background-color: rgb(44, 62, 80);
+    height: 50px;
+}
+
+section#jumbotron{
+    background-color: rgb(26, 188, 156);
+}
+
+
+section#portfolio{
+    background-color: rgb(188, 255, 242);
+    height: 400px;
+}
+
+section#about{
+    background-color: rgb(26, 188, 156);
+}
+
+/* section#about div{
+    border: 2px red solid;
+} */
+
+div.jumbo-box{
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgb(16, 129, 107);
+}
+
+
+div.grid-box{
+    height: 150px;
+    width: 220px;
+    background-color: chartreuse;
+    border: 1px solid black;
+}
+
+div.my-footer-top{
+    background-color: rgb(58, 84, 109);
+}
+
+div.my-footer-bottom{
+    background-color: rgb(44, 62, 80);
+}
+
+.my-light-bluegray{
+    background-color: rgb(44, 62, 80);
+}
