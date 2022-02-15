@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <!-- Montserrat google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap 5.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
 
     <title>Livecoding Bootstrap Freelancer</title>
@@ -14,8 +20,36 @@
 <body>
 
     <!-- Header + navbar -->
-    <header>
-        <!-- <nav></nav> -->
+    <header class="p-3">
+
+        <!-- Navbar customizzata dalla navbar standard di bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark text-uppercase">
+            <div class="container">
+
+            <a class="navbar-brand fw-bold fs-2" href="#">Start Bootstrap</a>
+
+            <!-- Hamburger icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Il wrapper di tutto ciò che dovrà scomparire una volta superata
+                in negativo la dimensione di collapsing -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
     </header>
 
     <!--  Jumbotron -->
