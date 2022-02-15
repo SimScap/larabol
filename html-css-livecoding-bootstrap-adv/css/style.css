@@ -1,0 +1,23 @@
+/* header{
+    height: 2rem;
+} */
+
+.my-bg-red{
+    background-color: red;
+}
+
+
+.my-bg-magenta{
+    background-color: magenta;
+}
+
+.my-bg-reddit{
+    background-color: rgb(218, 224, 230);
+}
+
+.my-box{
+    width: 100%;
+    height: 250px;
+    background-color: blue;
+    border: 3px lime solid;
+}
