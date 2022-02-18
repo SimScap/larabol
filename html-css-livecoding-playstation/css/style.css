@@ -1,0 +1,38 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header section#header-top img{
+    width: 4.5rem;
+}
+
+section#jumbotron{
+    margin-top: 105px;
+
+    background-image: url(../img/jumbo-bg.png);
+    background-size: cover;
+    background-position: center;
+
+    padding: 15rem 0rem 6rem;
+}
+
+section#thumbnails{
+    background-color: #1f1f1f;
+}
+
+section#thumbnails .thumbnail-title{
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+footer{
+    background-color: #00439c;
+}
+
+footer img#footer-sony-logo{
+    height: 3rem;
+}
+
+footer img.my-region-icon{
+    height: 1rem;
+}
