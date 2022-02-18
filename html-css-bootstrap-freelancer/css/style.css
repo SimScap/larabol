@@ -13,10 +13,10 @@ section#jumbotron{
 }
 
 
-section#portfolio{
-    background-color: rgb(188, 255, 242);
-    height: 400px;
-}
+/* section#portfolio{
+    /* background-color: rgb(188, 255, 242); */
+    /* height: 400px;
+} */
 
 section#about{
     background-color: rgb(26, 188, 156);
@@ -49,6 +49,46 @@ div.my-footer-bottom{
     background-color: rgb(44, 62, 80);
 }
 
-.my-light-bluegray{
+.my-bg-light-bluegray{
     background-color: rgb(44, 62, 80);
+}
+
+.my-light-bluegray{
+    color: rgb(44, 62, 80);
+}
+
+div.my-star-separator::before,
+div.my-star-separator::after{
+    content:'';
+    display: inline-block;
+
+    width: 100px;
+    height: 5px;
+    line-height: 5px;
+
+    vertical-align: middle;
+
+    border-radius: 5px;
+    background-color: white;
+}
+
+div.my-star-separator-black::before,
+div.my-star-separator-black::after{
+    content:'';
+    display: inline-block;
+
+    width: 100px;
+    height: 5px;
+    line-height: 5px;
+
+    vertical-align: middle;
+
+    border-radius: 5px;
+    background-color: rgb(44, 62, 80);
+}
+
+
+
+img#my-avatar-logo{
+    height: 300px;
 }

@@ -9,6 +9,10 @@
     <!-- Montserrat google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
 
+    <!-- Font-Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
     <!-- Bootstrap 5.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -53,11 +57,16 @@
     </header>
 
     <!--  Jumbotron -->
-    <section id="jumbotron" class="mb-4">
+    <section id="jumbotron" class="mb-4 py-2">
         <div class="container">
-            <div class="row">
+            <div class="row text-uppercase text-white text-center py-5">
                 <div class="col-12">
-                    <div class="jumbo-box"></div>
+                    <img id="my-avatar-logo" class="mb-3" src="img/avatar.svg" alt="Avatar logo">
+                    <h1 class="fw-bold">Start Bootstrap</h1>
+                    <div class="my-star-separator fs-2  my-3">
+                        <i class="fa fas fa-star mx-4"></i>
+                    </div>
+                    <h3>Graphic Artist - Web Designer - Illustrator</h3>
                 </div>
             </div>
         </div>
@@ -65,11 +74,53 @@
 
     <!-- Main contento -->
     <main>
-        <section id="portfolio" class="mb-4">
+        <section id="portfolio" class="my-5 py-5">
             <div class="container">
-                <div class="row text-center">
+                <div class="row text-center my-light-bluegray">
                     <div class="col-12">
-                        <h1>Titoletto di prova</h1>
+                        <h1 class="text-uppercase fw-bold fs-1">Portfolio</h1>
+                        <div class="my-star-separator-black fs-2  my-3">
+                            <i class="fa fas fa-star mx-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/cabin.png" alt="Cabin image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/cake.png" alt="Cake image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/circus.png" alt="Circus image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/game.png" alt="Game image">
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/safe.png" alt="Safe image">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="my-portfolio-item">
+                            <img class="img-fluid rounded" src="img/submarine.png" alt="Sub image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +164,7 @@
     </main>
 
 
-    <footer class="my-light-bluegray text-white">
+    <footer class="my-bg-light-bluegray text-white">
         <div class="my-footer-top">
             <div class="container">
                 <div class="row gx-2 gy-3">
