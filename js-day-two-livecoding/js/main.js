@@ -143,46 +143,58 @@
 // stabilisco chi vinca tra l'utente e il computer
 // lo comunico all'utente
 
-let oddOrEven = prompt("Vuoi pari o dispari?").toLowerCase();
-console.log(oddOrEven);
+// let oddOrEven = prompt("Vuoi pari o dispari?").toLowerCase();
+// console.log(oddOrEven);
 
-// se non è né dispari né pari
-if( (oddOrEven != "dispari" && oddOrEven != "pari") ){
-    console.warn("Mi dispiace il valore inserito non è valido, sceglierò per te: pari");
-    oddOrEven = 'pari';
-}
+// // se non è né dispari né pari
+// if( (oddOrEven != "dispari" && oddOrEven != "pari") ){
+//     console.warn("Mi dispiace il valore inserito non è valido, sceglierò per te: pari");
+//     oddOrEven = 'pari';
+// }
 
-let userNumber = parseInt(prompt("Scegli un numero da 1 a 9"));
-console.log(userNumber);
+// let userNumber = parseInt(prompt("Scegli un numero da 1 a 9"));
+// console.log(userNumber);
 
-if( (isNaN(userNumber) || (userNumber > 9 || userNumber < 1 ) ) ){
-    console.log('Hai scelto un numero non valido, genererò un numero casuale a tuo nome');
-    userNumber = Math.floor(Math.random() * 9) + 1;
-    console.log('Il nuovo numero generato dal computer per conto dell\'utente è ' + userNumber );
-}
+// if( (isNaN(userNumber) || (userNumber > 9 || userNumber < 1 ) ) ){
+//     console.log('Hai scelto un numero non valido, genererò un numero casuale a tuo nome');
+//     userNumber = Math.floor(Math.random() * 9) + 1;
+//     console.log('Il nuovo numero generato dal computer per conto dell\'utente è ' + userNumber );
+// }
 
-// generiamo un numero randomico tra 1 e 9 compresi
-const randomInt = Math.floor(Math.random() * 9) + 1;
-console.log(randomInt);
+// // generiamo un numero randomico tra 1 e 9 compresi
+// const randomInt = Math.floor(Math.random() * 9) + 1;
+// console.log(randomInt);
 
-// # n % 2 => 0 vuol dire che il numero è pari
-// # n % 2 => 1 vuol dire che il numero è dispari
+// // # n % 2 => 0 vuol dire che il numero è pari
+// // # n % 2 => 1 vuol dire che il numero è dispari
 
-let somma = userNumber + randomInt;
-let risultato;
+// let somma = userNumber + randomInt;
+// let risultato;
 
-if (somma % 2 == 0) // se il numero dell'utente è pari
-{
-    console.log('La somma è pari');
-    risultato = "pari";
-} else {
-    console.log('La somma è dispari');
-    risultato = "dispari";
-}
+// if (somma % 2 == 0) // se il numero dell'utente è pari
+// {
+//     console.log('La somma è pari');
+//     risultato = "pari";
+// } else {
+//     console.log('La somma è dispari');
+//     risultato = "dispari";
+// }
 
-// Se il risultato è uguale a quello che ha scritto l'utente all'inizio, allora
-if (risultato == oddOrEven){
-    console.log('Hai vinto!');
-} else { // altrimenti
-    console.log('Ha vinto gliavascript!');
-}
+// // Se il risultato è uguale a quello che ha scritto l'utente all'inizio, allora
+// if (risultato == oddOrEven){
+//     console.log('Hai vinto!');
+// } else { // altrimenti
+//     console.log('Ha vinto gliavascript!');
+// }
+
+// ?    Quanto manca?
+//  usando le funzioni dell'oggeto Date stabiliamo l'ora attuale
+//  e scriviamo su console quanti minuti manchino alla fine dell'ora.
+
+const oraAttuale = new Date();
+const minutiNellOra = 60;
+// abbiamo l'ora
+const minutiMancanti = minutiNellOra - oraAttuale.getMinutes();
+console.log( minutiMancanti);
+
+document.getElementById('output').innerHTML += `Mancano ben ${minutiMancanti} minuti alla fine dell'ora`;
