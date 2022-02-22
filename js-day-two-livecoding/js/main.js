@@ -191,10 +191,47 @@
 //  usando le funzioni dell'oggeto Date stabiliamo l'ora attuale
 //  e scriviamo su console quanti minuti manchino alla fine dell'ora.
 
-const oraAttuale = new Date();
-const minutiNellOra = 60;
-// abbiamo l'ora
-const minutiMancanti = minutiNellOra - oraAttuale.getMinutes();
-console.log( minutiMancanti);
+// const oraAttuale = new Date();
+// const minutiNellOra = 60;
+// // abbiamo l'ora
+// const minutiMancanti = minutiNellOra - oraAttuale.getMinutes();
+// console.log( minutiMancanti);
 
-document.getElementById('output').innerHTML += `Mancano ben ${minutiMancanti} minuti alla fine dell'ora`;
+// document.getElementById('output').innerHTML += `Mancano ben ${minutiMancanti} minuti alla fine dell'ora`;
+
+
+const numeroUtente = parseInt(prompt('Scegli un giorno della settimana da 0 a 6'));
+
+if (numeroUtente < 0 || numeroUtente > 6){
+    numeroUtente = Math.floor(Math.random() * 7);
+}
+
+// controllo sulla variabile selezionata che nei casi specificati possa avvenire quello
+// che indico negli stessi + break. Infine aggiungo un caso di default (= else finale)
+switch (numeroUtente) {
+    case 0:
+        console.log('mannaggia è lunedì');
+        break;
+    case 1:
+        console.log('è martedì');
+        break;
+    case 2:
+        console.log('è mercoledì');
+        break;
+    case 3:
+        console.log('è giovedì: gnocchi!');
+        break;
+    case 4:
+        console.log('è venerdì: eddaje');
+        break;
+    case 5:
+        console.log('è sabbeto, trippa!');
+        break;
+    case 6:
+        console.log('è dommenica: maalox');
+        break;
+
+    // IN TUTTI GLI ALTRI CASI
+    default:
+        console.error('bugghissimo imprevedibilissimo')
+}
