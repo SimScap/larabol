@@ -87,23 +87,49 @@
 //     console.log("l'if che controlla se valore è uguale a 4 è negativo");
 // }
 
-// console.log("Ciao");
+// // console.log("Ciao");
 
-const primaParola = prompt('inserisci una parola');
-const secondaParola = prompt('inserisci un\'altra parola');
+// const primaParola = prompt('inserisci una parola');
+// const secondaParola = prompt('inserisci un\'altra parola');
 
-// Verificare quale parola sia la più lunga oppure se siano uguali.
+// // Verificare quale parola sia la più lunga oppure se siano uguali.
 
-//  Devo trovare il modo di estrarre il numero
-//  di caratteri di una stringa dalla singola stringa
+// //  Devo trovare il modo di estrarre il numero
+// //  di caratteri di una stringa dalla singola stringa
 
-if ( primaParola.length > secondaParola.length ){
-    console.log('La prima parola è la più lunga');
-    document.getElementById('output').innerHTML = "La prima parola è la più lunga";
-} else if ( primaParola.length < secondaParola.length ) {
-    console.log('La seconda parola è la più lunga');
-    document.getElementById('output').innerHTML = "La seconda parola è la più lunga";
+// if ( primaParola.length > secondaParola.length ){
+//     console.log('La prima parola è la più lunga');
+//     document.getElementById('output').innerHTML = "La prima parola è la più lunga";
+// } else if ( primaParola.length < secondaParola.length ) {
+//     console.log('La seconda parola è la più lunga');
+//     document.getElementById('output').innerHTML = "La seconda parola è la più lunga";
+// } else {
+//     console.log('Le parole sono ugualmente lunghe');
+//     document.getElementById('output').innerHTML = "Le parole sono ugualmente lunghe";
+// }
+
+
+
+const etaUtenteUno = parseInt(prompt("Dicci l'età del primo utente"));
+const etaUtenteDue = parseInt(prompt("Dicci l'età del secondo utente"));
+
+console.log(etaUtenteUno);
+console.log(etaUtenteDue);
+
+let outputLog = "";
+
+if (etaUtenteUno > etaUtenteDue) {
+    // utente uno è più grande
+    outputLog = "Utente uno è più grande";
+} else if ( etaUtenteDue > etaUtenteUno) {
+    // utente due è più grande
+    outputLog = "Utente due è più grande";
 } else {
-    console.log('Le parole sono ugualmente lunghe');
-    document.getElementById('output').innerHTML = "Le parole sono ugualmente lunghe";
+    // gli utenti hanno la stessa età
+    outputLog = "Gli utenti hanno la stessa età";
 }
+
+document.getElementById('output').innerHTML = outputLog;
+document.getElementById('output').innerHTML += `,
+poiché il primo utente ha ${etaUtenteUno} anni ed il secondo utente ha ${etaUtenteDue} anni.`;
+
