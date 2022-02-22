@@ -200,9 +200,9 @@
 // document.getElementById('output').innerHTML += `Mancano ben ${minutiMancanti} minuti alla fine dell'ora`;
 
 
-const numeroUtente = parseInt(prompt('Scegli un giorno della settimana da 0 a 6'));
+let numeroUtente = parseInt(prompt('Scegli un giorno della settimana da 0 a 6'));
 
-if (numeroUtente < 0 || numeroUtente > 6){
+if ((numeroUtente < 0 || numeroUtente > 6) || isNaN(numeroUtente) ){
     numeroUtente = Math.floor(Math.random() * 7);
 }
 
