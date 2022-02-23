@@ -1,0 +1,11 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+main pre{
+    background-color: cadetblue;
+    font-size: 1.3rem;
+    border-radius: .4%;
+    border: 3px greenyellow solid;
+
+}
