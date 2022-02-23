@@ -200,38 +200,132 @@
 // document.getElementById('output').innerHTML += `Mancano ben ${minutiMancanti} minuti alla fine dell'ora`;
 
 
-let numeroUtente = parseInt(prompt('Scegli un giorno della settimana da 0 a 6'));
+// let numeroUtente = parseInt(prompt('Scegli un giorno della settimana da 0 a 6'));
 
-if ((numeroUtente < 0 || numeroUtente > 6) || isNaN(numeroUtente) ){
-    numeroUtente = Math.floor(Math.random() * 7);
+// if ((numeroUtente < 0 || numeroUtente > 6) || isNaN(numeroUtente) ){
+//     numeroUtente = Math.floor(Math.random() * 7);
+// }
+
+// // controllo sulla variabile selezionata che nei casi specificati possa avvenire quello
+// // che indico negli stessi + break. Infine aggiungo un caso di default (= else finale)
+// switch (numeroUtente) {
+//     case 0:
+//         console.log('mannaggia è lunedì');
+//         break;
+//     case 1:
+//         console.log('è martedì');
+//         break;
+//     case 2:
+//         console.log('è mercoledì');
+//         break;
+//     case 3:
+//         console.log('è giovedì: gnocchi!');
+//         break;
+//     case 4:
+//         console.log('è venerdì: eddaje');
+//         break;
+//     case 5:
+//         console.log('è sabbeto, trippa!');
+//         break;
+//     case 6:
+//         console.log('è dommenica: maalox');
+//         break;
+
+//     // IN TUTTI GLI ALTRI CASI
+//     default:
+//         console.error('bugghissimo imprevedibilissimo')
+// }
+
+//
+
+/**
+ *
+ * Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
+    Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
+        -   il prezzo del biglietto è definito in base ai km (0.21 € al km)
+        -   va applicato uno sconto del 20% per i minorenni
+        -   va applicato uno sconto del 40% per gli over 65.
+
+        L'output del prezzo finale va emesso con massimo due decimali, per indicare centesimi sul prezzo.
+
+        Questo richiederà un minimo di ricerca.
+ *
+ *
+ *
+ *
+ */
+        // vittorio => Problemi implementativi con i template literals
+        // matteo l. => sia prezzo pieno che il prezzo scontato
+
+
+
+    /**
+     *
+     *  1)   Chiediamo all'utente:
+     *      -   numero di chilometri da percorrere
+     *      -   età del passeggero
+     *
+     *  2)  Calcolare il prezzo del biglietto:
+     *      >   0.21€ al km
+     *      >   sconto del 20% per minorenni
+     *          --  minorenne:  età del passeggero < 18
+     *          --  20% :   calcolo percentuale
+     *      >   sconto del 40% per gli anzianotti > 65 anni
+     *
+     *  3)  Restituire l'output e mostrarlo all'utente con al massimo due decimali
+     *      >   Prendo il calcolo del prezzo
+     *      >   Lo elaboro per trasformarlo con al massimo due decimali
+     *          --  devo cercare un modo per trasformare un numero con virgola e limitare
+     *              le sue cifre decimali a due
+     *      >   Mostrerò all'utente
+     *
+     *  4)  Bonus (se ho tempo):
+     *      >   mostro tutti i dettagli a schermo
+     *      >   li rendo caruccetti
+     *
+     *
+     */
+
+// Chiedo all'utente i km da percorrere e lo converto a numero reale
+const tripDistance = parseFloat( prompt('Inserisci la distanza che vuoi percorrere in chilometri'));
+
+// Chiedo all'utente l'età del passeggero e lo converto a numero intero
+const userAge = parseInt( prompt('Inserisci l\'età del passeggero'));
+
+// controllo che nessun valore sia nan
+if ((isNaN(tripDistance)) || (isNaN(userAge))){
+    console.error('Uno dei due valori inseriti non è valido');
 }
 
-// controllo sulla variabile selezionata che nei casi specificati possa avvenire quello
-// che indico negli stessi + break. Infine aggiungo un caso di default (= else finale)
-switch (numeroUtente) {
-    case 0:
-        console.log('mannaggia è lunedì');
-        break;
-    case 1:
-        console.log('è martedì');
-        break;
-    case 2:
-        console.log('è mercoledì');
-        break;
-    case 3:
-        console.log('è giovedì: gnocchi!');
-        break;
-    case 4:
-        console.log('è venerdì: eddaje');
-        break;
-    case 5:
-        console.log('è sabbeto, trippa!');
-        break;
-    case 6:
-        console.log('è dommenica: maalox');
-        break;
 
-    // IN TUTTI GLI ALTRI CASI
-    default:
-        console.error('bugghissimo imprevedibilissimo')
+// Stabilisco un prezzo per chilometro
+const pricePerKm = 0.21;
+// calcolo il prezzo del biglietto sulla base della distanza
+let basePrice = pricePerKm * tripDistance;
+let price = basePrice;
+// applico eventuali sconti:
+
+let message = "";
+
+
+if ((userAge < 18) && (userAge > 0)) {     // se il passeggero è minorenne
+    // § price = price - (price * 0.2);
+    price -= price * 0.2;
+    message = `Hai diritto al 20% di sconto poiché il passeggero ha ${userAge} anni,
+    pertanto il prezzo totale del biglietto sarà di: ${price}€, invece di ${basePrice}`;
+} else if ((userAge >= 65) && (userAge <= 115)){
+    // § price = price - (price * 0.4);
+    // § price -= price * 0.4;
+    // § price = price * 0.6;
+    price *= 0.6;
+    message = `Hai diritto al 40% di sconto poiché il passeggero ha ${userAge} anni,
+    pertanto il prezzo totale del biglietto sarà di: ${price}€, invece di ${basePrice}`;
+} else {
+    message = `Non hai diritto a nessuno sconto poiché il passeggero ha ${userAge} anni,
+    pertanto il prezzo totale del biglietto sarà di: ${price}€`;
 }
+
+// converto il prezzo a due sole cifre decimali
+// let message = "Il prezzo del biglietto è: " + price.toFixed(2) + '€';
+console.log(message);
+document.getElementById('output').innerHTML = message;
