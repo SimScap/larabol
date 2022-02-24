@@ -45,7 +45,7 @@
     const outputElement = document.querySelector('#ticket-desk');
 
     // aggiungo un event listener su evento click al bottone che genera i biglietti
-    ticketGeneratorButton.addEventListener('click', function()  { // condizioni e calcoli per ogni click sul bottone
+    ticketGeneratorButton.addEventListener('click', function(){ // condizioni e calcoli per ogni click sul bottone
         /**
          *
             il prezzo del biglietto è definito in base ai km (0.27 € al km)
@@ -98,17 +98,17 @@
 
     })
 
-
     const ticketReset = document.getElementById('button-reset');
 
     // aggiungo un event listener su evento click al bottone che genera i biglietti
     ticketReset.addEventListener('click', function(){
 
-
+        // Resetto i valori interessati
         userName.value = "";
-        userAge.value = "maggi";
+        userAge.value = "maggiorenne";
         userDistance.value = "";
         outputElement.innerHTML = "";
 
+        // Nascondo il contenuto
         document.getElementById('output').classList.add('d-none');
     });
