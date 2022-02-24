@@ -1,0 +1,19 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+div.box{
+    height: 140px;
+    width: 140px;
+    background-color: darkviolet;
+    color: yellowgreen;
+    font-size: 3rem;
+    font-weight: 600;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 140px;
+}
+
+div.bg-blue{
+    background-color:rgb(10, 10, 83) ;
+}
