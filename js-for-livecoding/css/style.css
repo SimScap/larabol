@@ -7,7 +7,7 @@ div.box{
     width: 140px;
     background-color: darkviolet;
     color: yellowgreen;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     border: 2px solid black;
     text-align: center;
@@ -16,4 +16,16 @@ div.box{
 
 div.bg-blue{
     background-color:rgb(10, 10, 83) ;
+}
+
+div.bg-yellow{
+    background-color:yellow ;
+}
+
+div.bg-cyan{
+    background-color:cyan ;
+}
+
+div.bg-magenta{
+    background-color:magenta ;
 }

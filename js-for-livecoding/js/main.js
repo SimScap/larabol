@@ -46,15 +46,34 @@
 // ESERCIZIO 3
 const wrapper = document.getElementById('for-wrapper');
 
-for (let i = 0 ; i<= 100 ; i++){
+for (let i = 1 ; i<= 100 ; i++){
+
     // creo il div di riferimento
     let newDiv = document.createElement('div');
 
     // aggiungo al div appena creato le classi necessarie
     newDiv.classList.add('box', 'm-3');
 
-    // cambio il contenuto del div appena creato inserendovi il valore dell'indice
-    newDiv.innerHTML = i;
+    // se l'indice è multiplo sia di 3 che di 5 allora ==> sia multiplo di 15
+    if (i % 15 == 0){
+        // cambio il contenuto del div appena creato inserendovi il valore dell'indice
+        newDiv.classList.add('bg-magenta');
+        newDiv.innerHTML = "FizzBuzz";
+
+    // se invece l'indice è esclusivamente multiplo di 3 allora
+    } else if (i % 3 == 0) {
+        newDiv.classList.add('bg-yellow');
+        newDiv.innerHTML = "Fizz";
+
+    // se invece l'indice è esclusivamente multiplo di 5 allora
+    } else if (i % 5 == 0) {
+        newDiv.classList.add('bg-cyan');
+        newDiv.innerHTML = "Buzz";
+
+    // in tutti gli altri casi allora
+    } else {
+        newDiv.innerHTML = i;
+    }
 
     // infine aggiungo il div creato al parent al quale voglio aggiungerlo
     wrapper.append(newDiv);

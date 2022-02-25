@@ -95,8 +95,7 @@
             outputElement.innerHTML = `Il biglietto di ${userName.value} ha un costo di ${ticketPrice.toFixed(2)}€`;
         }
         document.getElementById('output').classList.remove('d-none');
-
-    })
+    });
 
     const ticketReset = document.getElementById('button-reset');
 
