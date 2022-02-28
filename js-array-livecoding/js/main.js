@@ -35,6 +35,11 @@ const students = ['Giovanni', 'Lorenza', 'Antonino'];
 // § Aggiungo uno o più elementi in coda all'array (ovvero come ultimo elemento)
 students.push("hug");
 
+// | Elimina un elemento in coda all'array (l'ultimo elemento) => e lo ritorna
+students.pop();
+console.log(students);
+// console.log(variabilozza);
+
 // # Aggiungo uno o più elementi in testa all'array (ovvero come primo elemento)
 students.unshift("Belle");
 console.log(students);
@@ -43,10 +48,6 @@ console.log(students);
 students.shift();
 console.log(students);
 
-// | Elimina un elemento in coda all'array (l'ultimo elemento) => e lo ritorna
-students.pop();
-console.log(students);
-// console.log(variabilozza);
 
 // * Esempio di rimozione di un elemento cercato nell'array usando una combinazione di indexOf e splice
 students.splice(students.indexOf('Giovanni'), 1, "Ciccio");
