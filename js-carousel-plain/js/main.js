@@ -70,23 +70,3 @@ nextButton.addEventListener('click', function() {
     // aggiungere la classe active al bookmark successivo
     bookmarkElements[activeElement].classList.add('active');
 });
-
-// Recupero il bottone
-const previousButton = document.querySelector('div.previous');
-
-previousButton.addEventListener('click', function() {
-    //  remove all'immagini corrente la classe active per renderla invisibile
-    carouselElements[activeElement].classList.remove('active');
-
-    //  remove al bookmark corrente la classe active per renderla invisibile
-    bookmarkElements[activeElement].classList.remove('active');
-
-    // incrementiamo di uno l'indice dell'immagine selezionata
-    activeElement--; // activeElement = activeElement - 1 ;
-
-    // aggiungere la classe active all'immagine precedente
-    carouselElements[activeElement].classList.add('active');
-
-    // aggiungere la classe active al bookmark precedente
-    bookmarkElements[activeElement].classList.add('active');
-});
