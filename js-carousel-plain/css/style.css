@@ -1,0 +1,95 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+main .my-container{
+    height: 100vh;
+    position: relative;
+    background-color: aquamarine;
+}
+
+main .carousel{
+    width: 60%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.carousel-element{
+    display: none;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.carousel-element.active{
+    display:block;
+}
+
+.carousel-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previous,
+.next {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+
+    opacity: .6;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: black;
+    background-color: rgb(229, 229, 229);
+
+    cursor: pointer;
+}
+
+.arrow{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.previous{
+    left: .2rem;
+}
+
+.next{
+    right: .2rem;
+}
+
+.bookmark-container{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle{
+    display: inline-block;
+    height: .75rem;
+    width: .75rem;
+    background-color: rgb(134, 134, 118);
+    border-radius: 50%;
+}
+
+.circle.active{
+    background-color: beige;
+}
