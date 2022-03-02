@@ -1,0 +1,106 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+div.slider{
+    /* width: 1000px; */
+    /* height: 55vh; */
+    display: flex;
+    max-width: 966px;
+    margin: auto;
+}
+
+div.slider .items{
+    flex-basis: 80%;
+}
+
+div.slider .item{
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+
+div.slider .item.active{
+    display: block;
+}
+
+div.slider .item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.slider .item-description{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+
+    text-align: end;
+}
+
+div.slider .thumbnails{
+    flex-basis: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    position: relative;
+}
+
+div.slider .thumbnail{
+    height: 100px;
+    filter: brightness(.4);
+}
+
+div.slider .thumbnail img{
+    height: 100%;
+    width: 100%;
+}
+
+div.slider .thumbnail.active{
+    filter:brightness(1);
+    border: 3px rgb(197, 197, 197) solid;
+}
+
+
+div.thumbnails .prev,
+div.thumbnails .next{
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+div.thumbnails .prev{
+    top: .5rem;
+}
+
+div.thumbnails .next{
+    bottom: .5rem;
+}
+
+div.thumbnails .prev::after,
+div.thumbnails .next::after
+{
+    content: '';
+    width: 2.2rem;
+    height: 2.2rem;
+    display: block;
+    border-radius: 50%;
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
