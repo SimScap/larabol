@@ -1,0 +1,40 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #011627;
+}
+
+main{
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+div#grid{
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+}
+
+div#grid .square-element{
+    border: 3px white solid;
+    float: left;
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+    cursor: crosshair;
+}
+
+div#grid .square-element.clicked{
+    background-color: yellowgreen;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
