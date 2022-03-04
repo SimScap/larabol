@@ -1,9 +1,9 @@
 /* RESET */
-*{
+/* *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
+} */
 
 body{
     font-family: "Montserrat", sans-serif;
@@ -15,7 +15,7 @@ main{
 }
 
 pre {
-    font-size: 2.5rem;
+    font-size: 2rem;
     border: 2px solid lightgreen;
     background-color: lightcyan;
 }
