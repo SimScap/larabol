@@ -1,18 +1,34 @@
-/* RESET */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: #011627;
+    background-color: #7fffd4;
+}
+
+header{
+    background-color: white;
+    height: 5rem;
+}
+
+header div.header-wrapper{
+    height: 5rem;
+    line-height: 5rem;
+    vertical-align: middle;
+}
+
+header div.header-start,
+header div.header-start img{
+    height: 100%;
+    line-height: 5rem;
 }
 
 main{
     padding: 2rem;
     margin-top: 3rem;
+    height: calc(95vh - 10rem);
+}
+
+footer{
+    background-color: white;
+    height: 5rem;
 }
 
 div#grid{
@@ -22,10 +38,10 @@ div#grid{
 }
 
 div#grid .square{
-    border: 3px white solid;
+    border: 1px black solid;
     float: left;
-    width: calc(100% / 8);
-    height: calc(100% / 8);
+    /* width: calc(100% / 8);
+    height: calc(100% / 8); */
     cursor: crosshair;
 
     display: flex;
@@ -35,20 +51,13 @@ div#grid .square{
 }
 
 div#grid .square > span {
-    display: none;
+    color: darkblue;
+}
+
+div#grid .square.clicked,
+div#grid .square.clicked span  {
+    background-color: rgb(22, 22, 109);
     color: white;
-}
-
-div#grid .square.clicked > span {
-    display: block;
-}
-
-div#grid .square-odd.clicked{
-    background-color: rgb(255, 0, 0);
-}
-
-div#grid .square-even.clicked{
-    background-color: rgb(143, 196, 37);
 }
 
 .clearfix::after{
