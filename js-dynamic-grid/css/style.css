@@ -21,16 +21,34 @@ div#grid{
     height: 600px;
 }
 
-div#grid .square-element{
+div#grid .square{
     border: 3px white solid;
     float: left;
     width: calc(100% / 8);
     height: calc(100% / 8);
     cursor: crosshair;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-div#grid .square-element.clicked{
-    background-color: yellowgreen;
+div#grid .square > span {
+    display: none;
+    color: white;
+}
+
+div#grid .square.clicked > span {
+    display: block;
+}
+
+div#grid .square-odd.clicked{
+    background-color: rgb(255, 0, 0);
+}
+
+div#grid .square-even.clicked{
+    background-color: rgb(143, 196, 37);
 }
 
 .clearfix::after{
