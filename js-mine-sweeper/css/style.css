@@ -60,6 +60,12 @@ div#grid .square.clicked span  {
     color: white;
 }
 
+div#grid .square.clicked-bomb,
+div#grid .square.clicked-bomb span  {
+    background-color: rgb(133, 6, 6);
+    color: white;
+}
+
 .clearfix::after{
     content: '';
     clear: both;
