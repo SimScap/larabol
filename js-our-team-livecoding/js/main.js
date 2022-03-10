@@ -61,9 +61,16 @@ const team = [
 
 
 for (let i = 0 ; i< team.length ; i++){
-    console.log(team[i]);
+    // console.log(team[i]);
     // § l'unico caso in cui possiamo usare un for (x in y) è quando y è un OGGETTO LETTERALE
-    for (chiave in team[i]){
-        console.log(chiave, ":", team[i][chiave]);
-    }
+    // for (chiave in team[i]){
+    //     console.log(chiave, ":", team[i][chiave]);
+    // }
+    document.getElementById('output').innerHTML += `
+    <div class="team-member">
+        <img src="img/${team[i].image}" alt="${team[i].name}"></img>
+        <h1>${team[i].name}</h1>
+        <p class="fs-4">${team[i].role}</p>
+    </div>
+    `;
 }
