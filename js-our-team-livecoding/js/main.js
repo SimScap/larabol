@@ -67,10 +67,12 @@ for (let i = 0 ; i< team.length ; i++){
     //     console.log(chiave, ":", team[i][chiave]);
     // }
     document.getElementById('output').innerHTML += `
-    <div class="team-member">
-        <img src="img/${team[i].image}" alt="${team[i].name}"></img>
-        <h1>${team[i].name}</h1>
-        <p class="fs-4">${team[i].role}</p>
+    <div class="card team-member mb-5 p-3 text-center">
+        <img src="img/${team[i].image}" class="card-img-top" alt="${team[i].name}">
+        <div class="card-body">
+            <h3 class="card-title">${team[i].name}</h3>
+            <pre class="card-text fs-5">${team[i].role}</pre>
+        </div>
     </div>
     `;
 }

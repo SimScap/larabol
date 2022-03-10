@@ -1,5 +1,10 @@
 body{
     font-family: "Montserrat", sans-serif;
     background-color: #001632;
-    color :white;
+    /* color :white; */
+}
+
+
+div#output div.card.team-member{
+    width: calc(100% / 2.5);
 }
