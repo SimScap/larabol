@@ -21,6 +21,8 @@ C ) bonus => facciamo vedere l'immagine come un'immagine effettiva
 D ) bonusII => creiamo in maniera creativa le schede (se volete usare come riferimento l'immagine, fate pure)
 
  *
+SUPERBONUS : Aggiungi in fondo all'esercizio un form con nome, ruolo e un link all'immagine che con un bottone consentano di aggiungere un team member per volta in più a quelli già presenti.
+
  */
 
 //  ! Milestone 1
@@ -61,17 +63,42 @@ const team = [
 
 
 for (let i = 0 ; i< team.length ; i++){
-    // console.log(team[i]);
+    // const memberObject = team[i];
+    // addTeamMember('output', memberObject.name, memberObject.role, memberObject.imageUrl);
+    addTeamMember('output', team[i].name, team[i].role, "img/"+team[i].image);
+}
+
+
+
+// quando aggiungo un bottone con una funzione, inizieri dal collegare lo stato delle informazioni da passare con un console.log presente all'interno dell'eventListener del suddetto bottone
+
+document.getElementById('add-team-member').addEventListener('click', function(){
+    const inputElements = document.querySelectorAll('#new-member-input .input-group > input');
+
+    const teamMemberInfo = [];
+    for ( let i = 0 ; i < inputElements.length ; i++) {
+        teamMemberInfo.push(inputElements[i].value);
+        inputElements[i].value = "";
+    }
+    console.warn(teamMemberInfo);
+    addTeamMember('output', teamMemberInfo[0], teamMemberInfo[1], teamMemberInfo[2] );
+});
+
+function addTeamMember(parentId, name, role, imageUrl){
+       // console.log(team[i]);
     // § l'unico caso in cui possiamo usare un for (x in y) è quando y è un OGGETTO LETTERALE
     // for (chiave in team[i]){
     //     console.log(chiave, ":", team[i][chiave]);
     // }
-    document.getElementById('output').innerHTML += `
+
+    if (parentId != '' && name != '' && role!= '' && imageUrl != '')
+
+    document.getElementById(parentId).innerHTML += `
     <div class="card team-member mb-5 p-3 text-center">
-        <img src="img/${team[i].image}" class="card-img-top" alt="${team[i].name}">
+        <img src="${imageUrl}" class="card-img-top" alt="${name}">
         <div class="card-body">
-            <h3 class="card-title">${team[i].name}</h3>
-            <pre class="card-text fs-5">${team[i].role}</pre>
+            <h3 class="card-title">${name}</h3>
+            <pre class="card-text fs-5">${role}</pre>
         </div>
     </div>
     `;
