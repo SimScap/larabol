@@ -16,14 +16,15 @@
 
 // console.warn(studente);
 
-// for (let chiave in studente){
-//     console.log(chiave, ":", studente[chiave]);
+// oggetto = {
+//     "a" : 2,
+//     "b" : 55,
+//     c : 102,
+//     d : 1000,
+// }
 
-//     // 1° caso : studente['nome']
-//     // 2° caso : studente['età-attuale']
-//     // 3° caso : studente['presente']
-//     // ...
-//     // n caso : studente[chiaveN]
+// for (let chiave in oggetto){
+//     console.log(chiave, ":", oggetto[chiave]);
 // }
 
 // console.log(document.getElementById('output'));
@@ -57,42 +58,88 @@
 
 // console.log(studenti[2].voti.push(7,8,7,9,10));
 
-const listaAnimali = [
-    {
-        specie: "gatto comune",
-        nome: 'Fuffi',
-        età: 7,
-        miagola: function(){
-            return 'miao';
-        }
-    },
-    {
-        specie: "lince europea",
-        nome: 'Lulli',
-        età: 5,
-        ruggisce: function(){
-            return 'roar';
-        }
-    },
-    {
-        specie: "cane comune",
-        nome: 'Cerberino',
-        età: 6,
-        abbaia: function(){
-            return 'bau bau';
-        }
-    }
-]
+// const listaAnimali = [
+//     {
+//         specie: "gatto comune",
+//         nome: 'Fuffi',
+//         età: 7,
+//         miagola: function(){
+//             return 'miao';
+//         }
+//     },
+//     {
+//         specie: "lince europea",
+//         nome: 'Lulli',
+//         età: 5,
+//         ruggisce: function(){
+//             return 'roar';
+//         }
+//     },
+//     {
+//         specie: "cane comune",
+//         nome: 'Cerberino',
+//         età: 6,
+//         abbaia: function(){
+//             return 'bau bau';
+//         }
+//     }
+// ]
 
 
-const listaStudenti = [
+// const listaStudenti = [
+//     {
+//         nome: 'Fuffi',
+//         cognome: 'Ciaons',
+//         età: 7,
+//         nomeCompleto : function() {
+//             return this.nome + " " + this.cognome;
+//         }
+//     }
+// ];
+
+
+// const campoDaGolf = {
+//     'città': 'Belfast',
+//     numeroDiTesserati : 1242,
+//     "lunghezza-percorso" : 12000,
+// }
+
+// // io voglio modificare la proprietà numero di tesserati perché si sono iscritte 5 nuove giocatrici
+
+// campoDaGolf.numeroDiTesserati += 5;
+// campoDaGolf['lunghezza-percorso'] += 1000;
+
+// console.log(campoDaGolf);
+
+
+const classi = [
     {
-        nome: 'Fuffi',
-        cognome: 'Ciaons',
-        età: 7,
-        nomeCompleto : function() {
-            return this.nome + " " + this.cognome;
-        }
+        nome: 'Classe#38',
+        numeroStudenti : 35,
+        mainTeacher : 'Marco'
+    },
+    {
+        nome: 'Classe#41',
+        numeroStudenti : 26,
+        mainTeacher : 'Riccardo'
+    },
+    {
+        nome: 'Classe#55',
+        numeroStudenti : 37,
+        mainTeacher : 'Riccardo'
+    },
+    {
+        nome: 'Classe#62',
+        numeroStudenti : 35,
+        mainTeacher : 'Olga'
     }
 ];
 
+const nuovaClasse = {
+    nome: 'Classe#99',
+    numeroStudenti: "boh",
+    mainTeacher: "chi lo sa!?"
+}
+
+classi.push(nuovaClasse);
+console.log(classi);
