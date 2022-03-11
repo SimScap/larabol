@@ -5,17 +5,19 @@ body{
 div.my-carousel-container{
     min-height: 700px;
     min-width:800px ;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 div.my-carousel-images{
-    background-color: cadetblue;
-    min-height: 540px;
+    /* background-color: cadetblue; */
+    height: 540px;
+    border: 1px solid;
 }
 
 div.my-thumbnails{
-    background-color: violet;
-    min-height: 160px;
+    /* background-color: violet; */
+    height: 160px;
+    border: 1px solid;
 }
 
 div.my-previous,
@@ -52,3 +54,56 @@ div.my-next > span::after{
     content: "\f520";
     line-height: 30px;
 }
+
+div.my-carousel-item{
+    display: none;
+}
+
+div.my-carousel-item.active{
+    display: block;
+}
+
+div.my-carousel-item{
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+div.my-carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.item-description{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    text-align: end;
+}
+
+div#my-carousel .my-thumbnails{
+    flex-basis: 20%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+
+div#my-carousel .my-thumbnails .my-thumbnail{
+    height: 160px;
+    filter: brightness(.4);
+}
+
+div#my-carousel .my-thumbnails .my-thumbnail img{
+    height: 100%;
+    width: 100%;
+}
+
+div#my-carousel .my-thumbnails .my-thumbnail.active{
+    filter:brightness(1);
+    border: 3px rgb(197, 197, 197) solid;
+}
+
+
