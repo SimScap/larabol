@@ -213,3 +213,32 @@ const zucchinis = [
 // console.table(array);
 // console.log(aNumber, bNumber);
 // console.table(arraySplitter(array, aNumber, bNumber));
+
+// function random(number) {
+//     return Math.floor(Math.random() * (number+1));
+// }
+
+// document.querySelector('button').addEventListener('click', () =>
+//     {
+//         document.body.style.backgroundColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+//     });
+
+
+// const title = document.querySelector('h1');
+
+// document.querySelector('input').addEventListener('keydown', function (event){
+//     // console.log(event.key);
+//     if(event.key == "Enter"){
+//         console.warn('INVIA IL DOCUMENTO');
+//         this.value = "";
+//         title.innerHTML = "";
+//     } else {
+//         title.innerHTML = this.value;
+//     }
+// });
+
+// console.log(sum(5,6));
+// newLog('ciaonzolo');
+for ( let i = 0; i < zucchinis.length ; i++){
+    if (zucchinis[i].tipo == "trombetta") break;
+}
