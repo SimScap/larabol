@@ -4,7 +4,9 @@ body{
 
 div.my-carousel-container{
     min-height: 700px;
-    min-width:800px ;
+    min-width: 800px ;
+    max-width: 1350px;
+    margin: 0 auto;
     /* background-color: aquamarine; */
 }
 
