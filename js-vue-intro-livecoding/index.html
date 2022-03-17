@@ -32,7 +32,31 @@
             <div class="row p-5">
                 <div class="col-8 col-offset-2">
 
-                    <button @click="saluta" class="btn btn-warning">Salutiamo</button>
+                    <button @click="invertBooleana" class="btn btn-warning">Salutiamo</button>
+
+                    <input type="text" v-model="numeroUtente">
+                    <div v-if="booleana">
+                        <h1>Booleana è vera</h1>
+                    </div>
+
+                    <div v-else>
+                        <h1>Booleana è falsa</h1>
+                    </div>
+
+                    <div v-show="booleana">
+                        <p>Descrizione booleana vera</p>
+                    </div>
+                    <div v-show="!booleana">
+                        <p>Descrizione booleana falsa</p>
+                    </div>
+
+                    <ul>
+                        <!-- § La prima variabile nel v-for è sempre l'elemento, la seconda è sempre l'indice -->
+                        <li v-for="element in 10">
+                            <div v-if="element % 2 === 0"> {{ element }} </div>
+                            <div v-if="element % 2 !== 0"> Disparo animalo - {{ element }} </div>
+                        </li>
+                    </ul>
 
                 </div>
             </div>

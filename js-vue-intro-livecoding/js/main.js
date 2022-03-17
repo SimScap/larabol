@@ -9,7 +9,9 @@ const app = new Vue(
         data : {
             firstName : '',
             lastName: '',
-            classeScelta : '',
+            numeroUtente : '0',
+            booleana : false,
+            mammiferi: ["volpe", "lupo", 'cane', 'ornitorinco', 'lince', 'lontra', 'orso bruno', 'sciacallo dorato']
         },
 
         // | i metodi (funzioni) raggiungibili dal lato html
@@ -19,7 +21,20 @@ const app = new Vue(
             saluta : function() {
                 console.log("Ciao!");
                 console.log(this.firstName);
+            },
+            invertBooleana : function () {
+                this.booleana = !this.booleana;
             }
+        },
+
+        // § Intercetto l'hook created
+        created(){
+            // console.log('istanza creata');
+        },
+
+        // § Intercetto l'hook update
+        updated(){
+            // console.warn('DOM aggiornato');
         }
     }
 )
