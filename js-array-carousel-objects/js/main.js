@@ -158,3 +158,24 @@ list.forEach((element, index) => {
     console.log(index, element);
 });
 
+// // § array.map ci consente di creare una copia dell'array su cui sto eseguendo la funzione che abbia come elementi i nuovi elementi restituiti all'interno della arrow function del map()
+// const newList = list.map((element) => {
+//     return parseInt(element.trim());
+// })
+
+// numbers = [1,2,3,4,5,6,7,8,9,11,12,13,14];
+
+// const oddNumbers = numbers.filter((element) => {
+//     if (element % 2 === 0){
+//         return false;   // non inserirlo nel nuovo array
+//     }
+//     return true; // inseriscilo nel nuovo array
+// })
+
+// // ? funzione che filtra tutti gli elementi che rispettano la condizione per cui viene ritornato true e li restituisce in una copia dell'array che contiene solo questi elementi.
+// const evenNumbers = numbers.filter((element) => {
+//     if (element % 2 === 0){
+//         return true;   // non inserirlo nel nuovo array
+//     }
+//     return false; // inseriscilo nel nuovo array
+// })
