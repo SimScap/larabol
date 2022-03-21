@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--  Fontawesome 6.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <!-- Vue 2.6.14 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Todolist</title>
+</head>
+<body>
+    <main id="app">
+        <div class="container-fluid p-5">
+            <div class="row text-center px-5">
+                <div class="col-12 mb-5">
+                    <div class="my-input-wrapper input-group">
+                        <input type="text" v-model="newTodoContent" class="form-control me-3" placeholder="Nuovo todo" @keydown.enter="addTodoElement(newTodoContent, false)" >
+                        <button @click="addTodoElement(newTodoContent, false)" class="btn btn-info rounded-3">Aggiungi</button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="my-todo-list-wrapper p-5 text-start">
+                        <!-- Lista di todo -->
+                        <ul class="my-todo-list" v-if="todoList.length >= 1">
+                            <li v-for="(element, index) in todoList " class="p-3 d-flex justify-content-between" >
+                                <!-- <span :class="(element.done) ? 'text-decoration-line-through' : '' "></span> -->
+                                <span :class="{'text-decoration-line-through' : element.done }"
+                                @click="toggleDone(index)" >{{ element.text }} - {{element.done}}</span>
+                                <span><i @click="removeTodoElement(index)" class="fa-solid fa-xmark"></i></span>
+                            </li>
+                        </ul>
+                        <h3 v-else>Non ci sono todo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

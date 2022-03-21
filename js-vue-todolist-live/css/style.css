@@ -1,0 +1,26 @@
+
+
+div.my-todo-list-wrapper{
+    background-color: #f5f7f7;
+    border-radius: 1rem;
+}
+
+ul.my-todo-list{
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+ul.my-todo-list li{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ffffff;
+    border-radius: .5rem;
+}
+
+ul.my-todo-list li:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: aquamarine;
+}
+
+ul.my-todo-list li span i:hover{
+    color: rgb(255, 0, 200);
+}
