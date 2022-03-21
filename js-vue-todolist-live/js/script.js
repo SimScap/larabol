@@ -58,7 +58,7 @@ const app = new Vue({
             } else {
                 console.warn('Stai cercando di attivare una funzionalità su un elemento che non esiste dalla todo list');
             }
-        }
+        },
 
     }
 });
@@ -79,22 +79,5 @@ const app = new Vue({
  *
     text, una stringa che indica il testo del todo
     done, un booleano (true/false) che indica se il todo è stato fatto oppure no
- *
- */
-
-
-/**
- *
- * Ale O, Fra Gio, Simo And, Eka, DanielJarnig, MattiaP  : cambiare il done dell'oggetto => come cambiare la proprietà dell'oggetto?
- *
- * Ale O. : difficoltà nella sintassi della scrittura delle funzioni
- *
- * Manuel Ger, Busna : quando rimuovo le todolist mi dà errore.
- *
- * Fra Capr, Busna: quando metto al penultimo il done, cancellandolo passava all'ultimo.
- *
- * Salvo : implementiamo di nuovo il remove
- *
- *
  *
  */
