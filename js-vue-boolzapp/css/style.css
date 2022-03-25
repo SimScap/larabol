@@ -1,0 +1,105 @@
+body{
+    background-color: cornsilk;
+}
+
+main#app::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+main#app.my-container{
+    width: 85%;
+    margin: 0 auto;
+    min-width: 1000px;
+
+}
+
+#app section.sidebar{
+    float: left;
+    width: 35%;
+    height: 80vh;
+    background-color: yellow;
+}
+
+#app section.message-view{
+    float: left;
+    width: 65%;
+    height: 80vh;
+    background-color: violet;
+}
+
+#app header.sidebar-header,
+#app div.sidebar-searchbar,
+#app header.message-header {
+    background-color: #EAEAEA;
+}
+
+#app header.sidebar-header,
+#app header.message-header {
+    height: 75px;
+}
+
+#app div.sidebar-disclaimer{
+    height: 80px;
+    background-color: #8edafc;
+}
+
+#app div.sidebar-searchbar{
+    height: 45px;
+}
+
+#app div.sidebar-contacts{
+    background-color: white;
+    height: calc(100% - 75px - 80px - 45px);
+    overflow-y: scroll;
+    /* 75 80 45 */
+}
+
+
+#app div.sidebar-contact.active{
+    background-color: #e9ebeb;
+}
+
+#app div.sidebar-contact:hover{
+    background-color: #fcfcfc;
+}
+
+#app div.sidebar-contact-logo{
+    width: 60px;
+    height: 60px;
+}
+
+#app header.message-header {
+    border-left: 1px solid rgb(190, 190, 190);
+}
+
+#app div.message-content{
+    height: calc(100% - 75px - 50px);
+    background-image: url('../img/mine.jpg');
+}
+
+#app div.message-content .message{
+
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+}
+
+#app div.message-content .message.sent{
+    background-color: #d5f9ba;
+}
+
+#app div.message-content .message.received{
+    background-color: #FFFFFF;
+    align-self: start;
+}
+
+#app div.message-content .message.nomessages{
+    background-color: #e2d7b5;
+    align-self: center;
+}
+
+#app footer.message-footer{
+    height: 50px;
+    background-color: #f3eeea;
+}
