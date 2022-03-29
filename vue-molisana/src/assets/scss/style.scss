@@ -1,0 +1,6 @@
+@import "./partials/_variables.scss";
+@import "./partials/_common.scss";
+
+div.centralize {
+    @include centralizerContainer;
+}
