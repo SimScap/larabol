@@ -28,7 +28,6 @@ export default {
     updateSelectedGenres(selectedGenre){
       this.selectedGenre = selectedGenre;
     },
-
   }
 }
 </script>

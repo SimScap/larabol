@@ -3,7 +3,8 @@
         <img src="../assets/images/la-molisana-logo.png" alt="La Molisana main logo">
         <nav>
             <ul>
-                <li v-for="(link, index) in headerLinks" :key="index" @click="setActivePage(index)" :class="{ active: link.current}" >
+                <li v-for="(link, index) in headerLinks" :key="index" @click="setActivePage(index)" :class="
+{ active: link.current}" >
                     <a :href="link.url">
                         {{ link.text }}
                     </a>

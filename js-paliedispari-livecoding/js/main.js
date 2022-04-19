@@ -114,8 +114,4 @@ function randomInteger(minimumValue, maximumValue){
  */
 function isEven(number){
    return number % 2 === 0;
-   // if ( number % 2 === 0 ){
-   //    return true;
-   // }
-   // return false;
 }
