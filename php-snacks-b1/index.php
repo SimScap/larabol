@@ -124,7 +124,6 @@ $posts = [
     <h3>Secondo snack:</h3>
     <p>
         <?php
-            // ? dobbiamo ancora correggere 0, perché se è all'inizio strpos darà 0 ==> booleano
 
             $params = $_GET;
             var_dump($params);
@@ -169,8 +168,32 @@ $posts = [
                 <?php } ?> <!-- //? chiusura secondo ciclo for -->
 
             <?php } ?> <!-- // #chiusura primo ciclo for -->
-
     </ul>
+
+    <!-- Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta -->
+    <h3>Quarto snack:</h3>
+    <p>
+        <?php
+            // ? il ciclo for richiede a chi lo scrive di conoscere con esattezza il numero di iterazioni che il ciclo deve compiere
+            // for ( $i = 0 ; $i < 15 ; $i++){
+                // mai inserire doppioni
+            // }
+            $randomNumbersArray = [];
+
+            // ? l'uso del while non richiede di conoscere con esattezza il numero di iterazioni ma esclusivamente una condizione di uscita
+            // # fino a quando il nostro array non ha raggiunto un numero di elementi equivalente a quello che vogliamo ottenere
+            while ( count($randomNumbersArray) < 15) {
+                // # genero un nuovo numero randomico
+                $tempRandomInt = rand(0, 100);
+                // § se il numero randomico appena generato non è presente nell'array
+                if (!in_array($tempRandomInt, $randomNumbersArray)){
+                    // § lo aggiungo al nostro array di numeri
+                    $randomNumbersArray[] = $tempRandomInt;
+                }
+            }
+        ?>
+    </p>
+
 
 </body>
 </html>
