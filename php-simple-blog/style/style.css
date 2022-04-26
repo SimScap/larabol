@@ -1,0 +1,15 @@
+
+body{
+    font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 350px;
+}
+
+.posts-container{
+    width: 80%;
+    padding: 4rem;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
