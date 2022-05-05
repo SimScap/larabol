@@ -31,12 +31,10 @@ Route::get('/products', function () {
 Route::get('/products/{index}', function ($index) {
     // # Prendo tutti i tipi di pasta
     $pastaList = config('pastas');
-
     // § se e solo se:
-    // § 1 - l'id è un numero 2 - maggiore di zero 3 - è minore della lunghezza dell'array di pasta
+    // § 1 - l'id è un numero 2 - maggiore/uguale di zero 3 - è minore della lunghezza dell'array di pasta
     if( is_numeric($index) && $index >= 0 && $index < count($pastaList)){
-        // ? ritornami la view di dettaglio con l'unito tipo di pasta da mostrare
-
+        // ? ritornami la view di dettaglio con l'unico tipo di pasta da mostrare
         return view('guest.detail', ["pasta" => $pastaList[$index]]); // $pasta
     } else {
         // | altrimenti scrivi a schermo l'errore 404 - Not found
