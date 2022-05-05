@@ -9,30 +9,24 @@ p {
 header div#index-header {
   text-align: center;
 }
-
 header div#index-header img {
   margin-bottom: 1.6rem;
 }
-
 header ul {
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
-
 header ul li {
   list-style-type: none;
   padding: 1rem;
 }
-
 header ul li a {
   font-weight: 600;
   text-decoration: none;
   color: black;
 }
-
-header ul li:active,
-header ul li.active {
+header ul li:active, header ul li.active {
   background-color: #dae9fe;
 }
 
@@ -45,9 +39,13 @@ div.centralize {
   margin-bottom: 2rem;
   background-image: url("/images/fondo-pag-speciali.jpg");
 }
-
 div.centralize h2 {
   margin-bottom: 2rem;
+}
+
+div.centralize.bg-blue {
+  background-image: none;
+  background-color: #b3e5fc;
 }
 
 div.pasta-container {
@@ -57,16 +55,37 @@ div.pasta-container {
   width: 80%;
   margin: 0 auto;
 }
-
-div.pasta-container .pasta-element {
+div.pasta-container div.pasta-element {
   width: calc(25% - 0.8rem);
   margin: 0.1rem;
   background-color: white;
   padding: 1rem;
   text-align: center;
 }
-
-div.pasta-container .pasta-element img {
+div.pasta-container div.pasta-element img {
   width: 100%;
 }
 
+div.single-pasta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+div.single-pasta-container .single-pasta-element {
+  width: 100%;
+  margin: 0.1rem;
+  padding: 1rem;
+  text-align: center;
+}
+div.single-pasta-container .single-pasta-element img {
+  width: 100%;
+}
+div.single-pasta-container .single-pasta-element img.pasta-thumbnail {
+  width: 22%;
+}
+
+div.bg-white {
+  background-color: white;
+}

@@ -1,5 +1,4 @@
 //
-
 @import "partials/variables";
 @import "partials/common";
 
@@ -54,6 +53,11 @@ div.centralize{
     }
 }
 
+div.centralize.bg-blue{
+    background-image: none;
+    background-color: $lightBlueBrandColor;
+}
+
 div.pasta-container{
     display: flex;
     flex-wrap: wrap;
@@ -61,18 +65,47 @@ div.pasta-container{
     width: 80%;
     margin: 0 auto;
 
+        div.pasta-element{
+            width: calc(25% - (.8rem));
+            margin: .1rem;
+            background-color: white;
+            padding: 1rem;
+            text-align: center;
 
-    .pasta-element{
-        width: calc(25% - (.8rem));
+            img{
+                width: 100%;
+            }
+    }
+
+
+}
+
+
+div.single-pasta-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+
+
+    .single-pasta-element{
+        width: 100%;
         margin: .1rem;
-        background-color: white;
         padding: 1rem;
         text-align: center;
 
         img{
             width: 100%;
         }
+
+        img.pasta-thumbnail{
+            width: 22%;
+        }
     }
 
 }
 
+div.bg-white{
+    background-color: white;
+}

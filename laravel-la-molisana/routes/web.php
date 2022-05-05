@@ -14,23 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('guest.home');
+})->name('general-homepage');
 
-
-Route::get('/home', function () {
-    $data = [
-        'day' => '04',
-        'month' => 'May',
-        'year' => '2022',
-        'username' => 'utente55',
-        'email' => 'utente55@mailtarocca.com'
-    ];
-
-    return view('guest.home', $data);
-})->name('guest-home');
+Route::get('/contacts', function () {
+    $pastas = config('pastas');
+    return view('guest.contacts');
+})->name('guest-contacts');
 
 Route::get('/products', function () {
-    $pastas = config('pastas');
-    return view('guest.products', ["pastas" => $pastas]);
-})->name('products-page');
+    $pastaList = config('pastas');
+    return view('guest.products', ["pastas" => $pastaList]); // $pastas
+})->name('guest-products');
+
+
+Route::get('/products/{index}', function ($index) {
+    // # Prendo tutti i tipi di pasta
+    $pastaList = config('pastas');
+
+    // § se e solo se:
+    // § 1 - l'id è un numero 2 - maggiore di zero 3 - è minore della lunghezza dell'array di pasta
+    if( is_numeric($index) && $index >= 0 && $index < count($pastaList)){
+        // ? ritornami la view di dettaglio con l'unito tipo di pasta da mostrare
+
+        return view('guest.detail', ["pasta" => $pastaList[$index]]); // $pasta
+    } else {
+        // | altrimenti scrivi a schermo l'errore 404 - Not found
+        abort(404);
+    }
+})->name('guest-detail');

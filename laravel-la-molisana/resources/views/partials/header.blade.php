@@ -3,21 +3,14 @@
         <img src="{{asset("images/la-molisana-logo.png")}}" alt="La Molisana main logo">
         <nav>
             <ul>
-                <li>
-                    <a href="{{ url('/') }}">
-                        Home
-                    </a>
-                </li>
-                <li class="active">
-                    <a  href="{{ route('products-page') }}">
-                        Prodotti
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/') }}">
-                        News
-                    </a>
-                </li>
+                @foreach ($links as $link)
+                    <li
+                    class="{{ Route::currentRouteName() == $link['route-name'] ? 'active' : ''}}">
+                        <a href="{{ route($link['route-name']) }}">
+                            {{ $link['title'] }}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
     </div>
