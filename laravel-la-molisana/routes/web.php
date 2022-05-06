@@ -22,7 +22,7 @@ Route::get('/contacts', function () {
     return view('guest.contacts');
 })->name('guest-contacts');
 
-Route::get('/products', function () {
+Route::get('/products/', function () {
     $pastaList = config('pastas');
     return view('guest.products', ["pastas" => $pastaList]); // $pastas
 })->name('guest-products');
@@ -35,7 +35,12 @@ Route::get('/products/{index}', function ($index) {
     // § 1 - l'id è un numero 2 - maggiore/uguale di zero 3 - è minore della lunghezza dell'array di pasta
     if( is_numeric($index) && $index >= 0 && $index < count($pastaList)){
         // ? ritornami la view di dettaglio con l'unico tipo di pasta da mostrare
-        return view('guest.detail', ["pasta" => $pastaList[$index]]); // $pasta
+        return view('guest.detail',
+        [
+            // ? "nomeVariabile" => "valoreVariabile"
+            "pasta" => $pastaList[$index],
+        ]
+    ); // $pasta
     } else {
         // | altrimenti scrivi a schermo l'errore 404 - Not found
         abort(404);

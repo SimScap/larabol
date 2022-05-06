@@ -1,6 +1,6 @@
 <header>
     <div id="index-header">
-        <img src="{{asset("images/la-molisana-logo.png")}}" alt="La Molisana main logo">
+        <img src="{{  asset("images/la-molisana-logo.png")}} " alt="La Molisana main logo">
         <nav>
             <ul>
                 @foreach ($links as $link)
