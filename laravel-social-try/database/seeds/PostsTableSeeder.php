@@ -14,7 +14,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < 200; $i++) {
+        for ($i=0; $i < 2000; $i++) {
             $newPost = new Post();
             $newPost->title = $faker->sentence(4);
             $newPost->post_image = $faker->imageUrl(300, 400, 'post', true);
