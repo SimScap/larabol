@@ -26,12 +26,17 @@
                         {{$habitat->description}}
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
                     <a href="{{route("habitats.show",$habitat->id - 1)}}">
                         <button class="btn btn-success">Previous</button>
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="col-4">
+                    <a href="{{route("habitats.edit", $habitat )}}">
+                        <button class="btn btn-warning">Edit</button>
+                    </a>
+                </div>
+                <div class="col-4">
                     <a href="{{route("habitats.show",$habitat->id + 1)}}">
                         <button class="btn btn-success">Next</button>
                     </a>

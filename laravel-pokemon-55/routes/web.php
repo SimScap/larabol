@@ -16,13 +16,12 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/pokemons/', "PokemonController@index")->name("pokemons.index");
 // Route::get('/pokemons/{id}', "PokemonController@show")->name("pokemons.show");
 
-Route::resource('pokemons', 'PokemonController');
+// Route::resource('pokemons', 'PokemonController');
 Route::resource('habitats', 'HabitatsController');
 
-// Route::prefix('habitats')
-//     ->name("habitats.")
-//     ->group(function () {
-//         Route::get('', "HabitatsController@index")->name("index");
-//         // Route::get('/{id}', "HabitatsController@show")->name("show");
-//         // Route::get('/{id}/tuffo', "HabitatsController@tuffo")->name("tuffo");
-//     });
+Route::prefix('pokemons')
+    ->name("pokemons.")
+    ->group(function () {
+        Route::get('', "PokemonController@index")->name("index");
+        Route::get('/{id}', "PokemonController@show")->name("show");
+    });

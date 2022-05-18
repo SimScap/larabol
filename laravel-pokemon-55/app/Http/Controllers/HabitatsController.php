@@ -14,7 +14,7 @@ class HabitatsController extends Controller
      */
     public function index()
     {
-        $newHabitats = Habitat::orderBy('id', 'desc')->paginate(50);
+        $newHabitats = Habitat::orderBy('id', 'desc')->paginate(20);
         return view('habitats.index', ["habitats" => $newHabitats] );
     }
 
@@ -66,24 +66,33 @@ class HabitatsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Habitat  $habitat
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Habitat $habitat)
     {
-        //
+        return view('habitats.edit', ["habitat" => $habitat] );
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Habitat $habitat
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Habitat $habitat)
     {
-        //
+        // dd($request->all());
+        $data = $request->all();
+        $habitat->name = $data['name'];
+        $habitat->image_url = $data['image_url'];
+        $habitat->affinity_types = $data['affinity_types'];
+        $habitat->description = $data['description'];
+        $habitat->avg_climate = $data['avg_climate'];
+        $habitat->save();
+
+        return redirect()->route("habitats.show", $habitat);
     }
 
     /**
