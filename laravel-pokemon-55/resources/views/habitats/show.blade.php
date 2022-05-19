@@ -7,6 +7,13 @@
     <div class="wrapper w-75 mx-auto">
         <div class="container-fluid">
             <div class="row p-4 text-center">
+
+                @if (session('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                @endif
+
                 <div class="col-12 m-3">
                     <h5 class="card-title">
                         {{ $habitat->name  }}

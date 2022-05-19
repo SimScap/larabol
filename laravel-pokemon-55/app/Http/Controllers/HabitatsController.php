@@ -40,6 +40,19 @@ class HabitatsController extends Controller
 
         $data = $request->all();
 
+        $request->validate([
+                "name" => "required|min:3|max:50",
+                "image_url" => "required|min:5",
+                "affinity_types" => "required|min:3",
+                "description" => "required|min:15",
+                "avg_climate" => "required|numeric",
+            ],
+            [
+                "required" => "Non puoi inserire un habitat senza :attribute.",
+                "avg_climate.numeric" => "L'avg_climate può essere solo un valore numerico"
+            ]
+        );
+
         $habitat = new Habitat();
         $habitat->name = $data['name'];
         $habitat->image_url = $data['image_url'];
@@ -85,6 +98,21 @@ class HabitatsController extends Controller
     {
         // dd($request->all());
         $data = $request->all();
+        // dd($request->all());
+
+        $request->validate([
+                "name" => "required|min:3|max:50",
+                "image_url" => "required|min:5",
+                "affinity_types" => "required|min:3",
+                "description" => "required|min:15",
+                "avg_climate" => "required|numeric",
+            ],
+            [
+                "required" => "Non puoi inserire un habitat senza :attribute.",
+                "avg_climate.numeric" => "L'avg_climate può essere solo un valore numerico"
+            ]
+        );
+
         $habitat->name = $data['name'];
         $habitat->image_url = $data['image_url'];
         $habitat->affinity_types = $data['affinity_types'];
@@ -92,17 +120,20 @@ class HabitatsController extends Controller
         $habitat->avg_climate = $data['avg_climate'];
         $habitat->save();
 
-        return redirect()->route("habitats.show", $habitat);
+        return redirect()->route("habitats.show", $habitat)
+        ->with("message", "$habitat->name è stato modificato con successo");
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Habitat  $habitat
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Habitat $habitat)
     {
-        //
+        $habitat->delete();
+        return redirect()->route('habitats.index')
+        ->with('deleted-message', "$habitat->name è stato eliminato con successo.");
     }
 }

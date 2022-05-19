@@ -8,10 +8,20 @@
         <div class="container-fluid">
             <div class="row p-4">
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 {{-- ? Per ogni valore rilevante ai fini del salvataggio abbiamo creato: --}}
                 {{-- # Un campo modificabile (tipicamente un input) in cui l'utente può inserire i contenuti --}}
                 {{-- § Un attributo del campo relativo di input chiamato "name" che ci consente di recupare il valore dal controller --}}
-                <form action="{{ route('habitats.update',  $habitat->id) }}" method="post">
+                <form action="{{ route('habitats.update',  $habitat) }}" method="post">
                     @csrf
 
                     {{-- § specifichiamo il vero metodo da utilizzare --}}
