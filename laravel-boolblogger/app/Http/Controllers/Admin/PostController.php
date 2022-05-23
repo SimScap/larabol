@@ -79,11 +79,14 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Post $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
+        $post->delete();
+
+        return redirect()->route('admin.posts.index')->with('deleted-message', "$post->title è stato eliminato con successo dalla lista dei post");
         //
     }
 }
