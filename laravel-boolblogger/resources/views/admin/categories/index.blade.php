@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid w-75 mx-auto">
+    <div class="container-fluid w-75 mx-auto" id="categories-wrapper">
         <div class="row">
             @if(session('deleted-message'))
                 <div class="col-12">
@@ -20,43 +20,30 @@
             @endif
 
             <div class="col-12">
-                <a href="{{route('admin.posts.create')}}" class="btn btn-lg btn-primary">Pubblica un nuovo post</a>
+                <a href="{{route('admin.categories.create')}}" class="btn btn-primary">Crea una nuova categoria</a>
             </div>
 
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Categories</th>
-                        <th>Created</th>
+                        <th>Category</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($posts as $post)
+                    @forelse ($categories as $category)
                         <tr>
-                            <td>
-                                <a href="{{route("admin.posts.show", $post)}}">
-                                    {{ $post->title }}
+                            <td style="background-color: {{$category->color}}">
+                                <a href="{{route("admin.categories.show", $category)}}">
+                                    {{ $category->name }}
                                 </a>
                             </td>
-                            <td>
-                                {{ $post->user->name }}
-                            </td>
-                            <td>
-                                @foreach ($post->categories as $category)
-                                    <span class="badge rounded-pill" style="background-color: {{$category->color}}" >{{$category->name}}</span>
-                                @endforeach
-                            </td>
-                            <td>
-                                {{ $post->created_at }}
-                            </td>
+
                             <td class="d-flex">
-                                <a href="{{ route("admin.posts.edit", $post) }}" class="btn btn-success btn-sm me-2" >Edit</a>
+                                <a href="{{ route("admin.categories.edit", $category) }}" class="btn btn-success btn-sm me-2" >Edit</a>
 
 
-                                <form action="{{route('admin.posts.destroy', $post)}}" method="POST" class="post-form-destroyer" post-title="{{$post->title}}">
+                                <form action="{{route('admin.categories.destroy', $category)}}" method="POST" class="category-form-destroyer" category-title="{{$category->name}}">
                                     @csrf
                                     @method('DELETE')
 
@@ -66,7 +53,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="3">There are no posts to show</td>
+                            <td colspan="3">Non ci sono categorie da mostrare</td>
                         </tr>
                     @endforelse
 
@@ -79,12 +66,12 @@
 
 @section('footer-scripts')
     <script defer>
-        const deleteForms = document.querySelectorAll('.post-form-destroyer');
+        const deleteForms = document.querySelectorAll('.category-form-destroyer');
         console.log(deleteForms);
         deleteForms.forEach(singleForm => {
             singleForm.addEventListener('submit', function (event) {
                 event.preventDefault(); // § blocchiamo l'invio del form
-                userConfirmation = window.confirm(`Sei sicuro di voler eliminare ${this.getAttribute('post-title')}?` );
+                userConfirmation = window.confirm(`Sei sicuro di voler eliminare ${this.getAttribute('category-title')}?` );
                 if (userConfirmation) {
                     this.submit();
                 }

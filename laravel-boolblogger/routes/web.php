@@ -26,7 +26,9 @@ Route::middleware('auth') // § intermediario che si assicura che il contenuto s
         // # inserisco qui le mie rotte riservate agli admin
         Route::get('/', 'HomeController@index')->name('home');   // | Aggiunta facoltativa ->middleware('password.confirm');
         Route::resource('posts', 'PostController');
+        Route::resource('categories', 'CategoryController');
     });
+
 
 // # tutte le altre rotte -> reindirizzale alla home dei guest
 Route::get('/{any}', 'Guest\HomeController@index')->where('any','.*');

@@ -51,6 +51,19 @@
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('admin.posts.index')}}" role="button" v-pre>
+                                    Posts
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('admin.categories.index')}}" role="button" v-pre>
+                                    Categories
+                                </a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

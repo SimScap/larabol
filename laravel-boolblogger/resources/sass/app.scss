@@ -6,3 +6,15 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#categories-wrapper {
+    table{
+        th, td{
+            a{
+                text-decoration: none;
+                color: black;
+                font-weight: bolder;
+            }
+        }
+    }
+}

@@ -12178,3 +12178,10 @@ fieldset:disabled .btn {
   }
 }
 
+#categories-wrapper table th a,
+#categories-wrapper table td a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+

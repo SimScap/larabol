@@ -37,6 +37,20 @@
 
                     <div class="mb-3">
                         <label for="image_url">Url dell'immagine</label>
+                        <select class="form-select" name="category">
+                            @foreach ($categories as $category)
+                                <option value="{{$category->id}}"
+                                    @if ($post->categories[0]->id === $category->id ) selected @endif>
+                                    {{$category->name}}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+
+                    <div class="mb-3">
+                        <label for="image_url">Url dell'immagine</label>
                         <input type="text" name="image_url" id="image_url" value="{{$post->image_url}}">
                         @error('image_url')
                             <div class="alert alert-danger">
