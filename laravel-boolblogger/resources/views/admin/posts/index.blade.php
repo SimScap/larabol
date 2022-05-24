@@ -10,6 +10,19 @@
                     </div>
                 </div>
             @endif
+
+            @if(session('message'))
+                <div class="col-12">
+                    <div class="alert alert-success">
+                        {{session('message')}}
+                    </div>
+                </div>
+            @endif
+
+            <div class="col-12">
+                <a href="{{route('admin.posts.create')}}" class="btn btn-lg btn-primary">Pubblica un nuovo post</a>
+            </div>
+
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -28,13 +41,14 @@
                                 </a>
                             </td>
                             <td>
-                                {{ $post->author }}
+                                {{ $post->user->name }}
                             </td>
                             <td>
                                 {{ $post->created_at }}
                             </td>
                             <td class="d-flex">
                                 <a href="{{ route("admin.posts.edit", $post) }}" class="btn btn-success btn-sm me-2" >Edit</a>
+
 
                                 <form action="{{route('admin.posts.destroy', $post)}}" method="POST" class="post-form-destroyer" post-title="{{$post->title}}">
                                     @csrf

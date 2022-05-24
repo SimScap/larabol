@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Post;
 use Illuminate\Support\Str;
+use App\User;
 
 class PostsTableSeeder extends Seeder
 {
@@ -14,10 +15,13 @@ class PostsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        // ? Prendo tutti i diversi id da User e li trasformo in un array
+        $user_ids = User::pluck('id')->toArray();
+
         for ($i=0; $i < 60; $i++) {
             $newPost = new Post();
             $newPost->title = ucfirst($faker->unique()->words(3, true));
-            $newPost->author = $faker->name();
+            $newPost->user_id = $faker->randomElement($user_ids);
             $newPost->content = $faker->paragraphs(7, true);
             $newPost->image_url = "https://picsum.photos/id/$i/450/600";
             $newPost->slug = Str::slug($newPost->title, '-');
