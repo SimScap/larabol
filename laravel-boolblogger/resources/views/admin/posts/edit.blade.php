@@ -36,15 +36,15 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="image_url">Url dell'immagine</label>
-                        <select class="form-select" name="category">
-                            @foreach ($categories as $category)
-                                <option value="{{$category->id}}"
-                                    @if ($post->categories[0]->id === $category->id ) selected @endif>
-                                    {{$category->name}}
-                                </option>
-                            @endforeach
-                        </select>
+                        @foreach ($categories as $category)
+                            <input class="form-check-input" type="checkbox" name="category[]" value="{{$category->id}}"
+                            {{-- @if($post->categories->contains($category)) checked @endif --}}
+                            {{ $post->categories->contains($category) ? 'checked' : '' }}
+                            >
+                            <label for="categories" class="badge rounded-pill me-3" style="background-color: {{ $category->color }}">
+                                {{$category->name}}
+                            </label>
+                        @endforeach
                     </div>
 
 

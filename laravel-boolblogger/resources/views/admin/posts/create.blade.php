@@ -45,6 +45,16 @@
                     </div>
 
                     <div class="mb-3">
+                        @foreach ($categories as $category)
+                            <input class="form-check-input" type="checkbox"
+                            name="category[]" value="{{$category->id}}">
+                            <label for="categories" class="badge rounded-pill me-3" style="background-color: {{ $category->color }}">
+                                {{$category->name}}
+                            </label>
+                        @endforeach
+                    </div>
+
+                    <div class="mb-3">
 
                         <label for="content" class="form-label">Inserisci il contenuto del post</label>
                         <textarea class="form-control" id="content" rows="10" name="content" id="decontentcription"></textarea>

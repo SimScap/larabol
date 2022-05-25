@@ -29,6 +29,7 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>Categories</th>
+                        <th>Comments</th>
                         <th>Created</th>
                         <th></th>
                     </tr>
@@ -48,6 +49,9 @@
                                 @foreach ($post->categories as $category)
                                     <span class="badge rounded-pill" style="background-color: {{$category->color}}" >{{$category->name}}</span>
                                 @endforeach
+                            </td>
+                            <td>
+                                {{ count($post->comments) }}
                             </td>
                             <td>
                                 {{ $post->created_at }}

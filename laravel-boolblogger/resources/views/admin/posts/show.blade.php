@@ -20,9 +20,14 @@
                 <h4 class="card-subtitle fs-6">
                     {{ $post->created_at }}
                 </h4>
+                @foreach ($post->categories as $category)
+                    <span class="badge rounded-pill" style="background-color: {{$category->color}}" >
+                        {{$category->name}}
+                    </span>
+                @endforeach
             </div>
             <div class="col-6 p-2 mb-2">
-                <img class="rounded" src="{{ $post->image_url }}" alt="image of {{$post->title}}">
+                <img class="rounded w-100" src="{{ $post->image_url }}" alt="image of {{$post->title}}">
             </div>
             <div class="col-6 p-2">
                 <div class="card-text">

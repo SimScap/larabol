@@ -18,7 +18,7 @@ class CommentsTableSeeder extends Seeder
         $postList = Post::all();
 
         foreach ($postList as $post) {
-            for ($i=0; $i < rand(3, 12); $i++) {
+            for ($i=0; $i < rand(0, 12); $i++) {
                 $newComment = new Comment();
                 $newComment->post_id = $post->id;
                 $newComment->author = $faker->name();

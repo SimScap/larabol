@@ -1,11 +1,20 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+}
+
+header h1{
+    font-size: 6rem;
+}
 
 #categories-wrapper {
     table{

@@ -31,7 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $categories = Category::all();
+
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**
@@ -48,12 +50,14 @@ class PostController extends Controller
         $data['slug'] = Str::slug($data['title'], '-');
 
         // ? Uso i Fillable in maniera espansiva
-        // $newPost = new Post();
-        // $newPost->fill($data);
-        // $newPost->save();
+        $newPost = new Post();
+        $newPost->fill($data);
+        $newPost->save();
 
         // § fillable in maniera rapida
-        Post::create($data);
+        // Post::create($data);
+
+        $newPost->categories()->sync($data['category']);
 
         return redirect()->route('admin.posts.index')
         ->with('message', $data['title']. " è stato pubblicato con successo.");
