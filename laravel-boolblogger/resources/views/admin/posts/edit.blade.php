@@ -48,7 +48,6 @@
                     </div>
 
 
-
                     <div class="mb-3">
                         <label for="image_url">Url dell'immagine</label>
                         <input type="text" name="image_url" id="image_url" value="{{$post->image_url}}">
@@ -79,3 +78,5 @@
         </div>
     </div>
 @endsection
+
+@dump($categories)

@@ -9,7 +9,11 @@ class Post extends Model
 
     protected $fillable = array('user_id', 'title', 'content', 'image_url', 'slug');
 
-    //
+
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
+
     public function user(){
         return $this->belongsTo('App\User');
     }

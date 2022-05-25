@@ -22,7 +22,7 @@ class PostsTableSeeder extends Seeder
             $newPost = new Post();
             $newPost->title = ucfirst($faker->realTextBetween(6, 16));
             $newPost->user_id = $faker->randomElement($user_ids);
-            $newPost->content = $faker->realText(400);
+            $newPost->content = $faker->realText(1600);
             $newPost->image_url = "https://picsum.photos/id/$i/450/600";
             $newPost->slug = Str::slug($newPost->title, '-')."-$i";
             $newPost->save();
