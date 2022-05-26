@@ -12192,6 +12192,56 @@ header .h1 {
   font-size: 6rem;
 }
 
+div#guest-home-wrapper {
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 7.5vh;
+  margin: 0;
+}
+
+div#guest-home-wrapper .full-height {
+  height: 100vh;
+}
+
+div#guest-home-wrapper .flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+div#guest-home-wrapper .position-ref {
+  position: relative;
+}
+
+div#guest-home-wrapper .top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+div#guest-home-wrapper .content {
+  text-align: center;
+}
+
+div#guest-home-wrapper .title {
+  font-size: 84px;
+}
+
+div#guest-home-wrapper .links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+div#guest-home-wrapper .m-b-md {
+  margin-bottom: 30px;
+}
+
 #categories-wrapper table th a,
 #categories-wrapper table td a {
   text-decoration: none;
