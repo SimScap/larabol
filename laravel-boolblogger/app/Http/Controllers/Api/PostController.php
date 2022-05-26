@@ -44,6 +44,8 @@ class PostController extends Controller
             [
                 'success' => true,
                 'results' => $post,
+                // 'author' => $post->user,
+                // 'comments' => $post->comments,
             ]);
     }
 

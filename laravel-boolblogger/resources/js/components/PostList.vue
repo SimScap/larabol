@@ -1,9 +1,13 @@
 <template>
     <div class="row p-5">
         <div class="col-12">
-            <h2 class="m-5">Gli ultimi post</h2>
+            <h2 class="m-5">
+                Gli ultimi post
+            </h2>
         </div>
+
         <Post v-for="(post, index) in posts" :key="index" :post="post"/>
+
         <nav aria-label="Page navigation">
             <ul class="pagination">
 

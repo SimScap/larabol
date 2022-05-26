@@ -1984,6 +1984,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 // import axios from 'axios';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3301,7 +3305,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12" }, [
-      _c("h2", { staticClass: "m-5" }, [_vm._v("Gli ultimi post")]),
+      _c("h2", { staticClass: "m-5" }, [
+        _vm._v("\n            Gli ultimi post\n        "),
+      ]),
     ])
   },
 ]
