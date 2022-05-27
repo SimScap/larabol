@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-        <div id="guest-home-wrapper">
+        {{-- <div id="guest-home-wrapper">
             <div class="flex-center position-ref full-height">
                 @if (Route::has('login'))
                     <div class="top-right links">
@@ -30,7 +30,7 @@
                     </div>
                 @endif
             </div>
-        </div>
+        </div> --}}
 
         <div id="root"></div>
 

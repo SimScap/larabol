@@ -15,7 +15,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(6);
+        // ? richiamo tutti i post con le relative categorie, i relativi commenti e l'utente relativo, impaginandoli poi per 6.
+        $posts = Post::with(['user','categories', 'comments' ])
+        ->inRandomOrder()
+        ->paginate(6);
 
         return response()->json($posts);
     }
