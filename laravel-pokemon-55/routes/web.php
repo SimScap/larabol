@@ -25,3 +25,5 @@ Route::prefix('pokemons')
         Route::get('', "PokemonController@index")->name("index");
         Route::get('/{id}', "PokemonController@show")->name("show");
     });
+
+Route::get('/', "Guest\HomeController@home")->name("guest.home");

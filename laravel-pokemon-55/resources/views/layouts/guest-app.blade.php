@@ -23,5 +23,4 @@
 
         @yield('footer-scripts')
     </body>
-    <script src="{{ asset("js/admin.js") }}"></script>
 </html>
