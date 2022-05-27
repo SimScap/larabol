@@ -1,5 +1,3 @@
-// Sia Cosmo che Salvatore hanno avuto difficoltà per il numero di generazioni successive al primo
-
 /**
 L'utente indica un livello di difficoltà in base al quale viene generata una griglia di gioco di quadrati, in cui ogni cella contiene un numero tra quelli compresi in un range:
 
