@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -52,6 +53,7 @@ class PostController extends Controller
         // ? Uso i Fillable in maniera espansiva
         $newPost = new Post();
         $newPost->fill($data);
+        $newPost->image_url = Storage::put('uploads', $data['image']);
         $newPost->save();
 
         // § fillable in maniera rapida

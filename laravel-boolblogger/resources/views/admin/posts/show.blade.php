@@ -27,7 +27,11 @@
                 @endforeach
             </div>
             <div class="col-6 p-2 mb-2">
-                <img class="rounded w-100" src="{{ $post->image_url }}" alt="image of {{$post->title}}">
+                @if(str_starts_with($post->image_url, 'https://') || str_starts_with($post->image_url, 'http://'))
+                    <img class="rounded w-100" src="{{ $post->image_url }}" alt="image of {{$post->title}}">
+                @else
+                    <img class="rounded w-100" src="{{ asset('/storage') . '/' . $post->image_url }}" alt="image of {{$post->title}}">
+                @endif
             </div>
             <div class="col-6 p-2">
                 <div class="card-text">

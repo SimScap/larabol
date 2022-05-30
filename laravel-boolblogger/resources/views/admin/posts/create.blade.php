@@ -20,7 +20,7 @@
                 {{-- ? Per ogni valore rilevante ai fini del salvataggio abbiamo creato: --}}
                 {{-- # Un campo modificabile (tipicamente un input) in cui l'utente può inserire i contenuti --}}
                 {{-- § Un attributo del campo relativo di input chiamato "name" che ci consente di recupare il valore dal controller --}}
-                <form action="{{ route('admin.posts.store') }}" method="post">
+                <form action="{{ route('admin.posts.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-3">
@@ -35,9 +35,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="image_url">Url dell'immagine</label>
-                        <input type="text" name="image_url" id="image_url">
-                        @error('image_url')
+                        <label for="image">Url dell'immagine</label>
+                        <input type="file" id="image" name="image">
+                        @error('image')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
