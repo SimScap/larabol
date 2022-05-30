@@ -29,6 +29,11 @@ Route::middleware('auth') // § intermediario che si assicura che il contenuto s
         Route::resource('categories', 'CategoryController');
     });
 
+Route::get('/test', function(){
+    return view('guest.test');
+});
+
+
 Route::get('/latest-posts', 'Guest\PostController@index')->name('guest.posts');
 
 // # tutte le altre rotte -> reindirizzale alla home dei guest

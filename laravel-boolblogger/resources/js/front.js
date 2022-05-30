@@ -7,10 +7,7 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import App from "./views/App";
 
-
-
 window.Vue.use(VueRouter);
-
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -19,7 +16,7 @@ import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'history', // ? per non avere l'hashtag davanti ad ogni link
     routes: [
         {
             path: '/',
