@@ -20,5 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // ? non è /posts, ma sarà api/posts
 Route::get('/posts', 'Api\PostController@index');
 
-Route::get('/posts/{post}', 'Api\PostController@show');
+Route::get('/posts/{id}', 'Api\PostController@show');
 Route::delete('/posts/{id}', 'Api\PostController@destroy');

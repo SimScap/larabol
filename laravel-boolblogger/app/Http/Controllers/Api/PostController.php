@@ -37,12 +37,12 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Post $post
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        // $post = Post::findOrFail($post);
+        $post = Post::with(['user','categories', 'comments' ])->findOrFail($id);
         return response()->json(
             [
                 'success' => true,
