@@ -163,24 +163,11 @@ function writeInElementById(elementId, stringToWrite){
     document.getElementById(elementId).innerHTML = stringToWrite;
 }
 
-/**
- * Alessio, Vittorio, Franesco, Manuel, Salvatore difficoltà con la realizzazione dell'interruzione del gioco "game over" CHECK
- *
- * Francesco C. funzione generare bombe uniche (anche l'altro Francesco all'inizio)
- *
- * Marco & Salvatore : click vale all'infinito per i punti      CHECK
-*               1)   Fra G. event listener  --> usando (){}
- *              2)      Alessio => removeEventListener()
- *              3)      Matteo T. pointer events none (lato CSS)
- *
- *  Airowl : implementazione iniziale scoperta di tutte le bombe        CHECK
- */
 
 function checkAndAddClass( parentElementId , bombList, classToAdd){
     const squares = document.getElementById(parentElementId).children;
 
-    // § Don Matteo alternative
-    // per ogni quadrato presente
+    // implementazione che cicla sui quadrati
     for (let i= 0 ; i < squares.length ; i++ ){
         // se è anche una bomba
         if ( bombList.includes(parseInt(squares[i].firstChild.innerHTML)) ){
@@ -188,9 +175,8 @@ function checkAndAddClass( parentElementId , bombList, classToAdd){
             squares[i].classList.add(classToAdd);
         }
     }
-
-    // | Alessio alternative
-    //  // per ogni quadrato presente
+    
+    //  implementazione alternativa che cicla sulle bombe
     // for (let i= 0 ; i < bombList.length ; i++ ){
     //     // se è anche una bomba
     //     if ( bombList.includes(parseInt(squares[i].firstChild.innerHTML)) ){
