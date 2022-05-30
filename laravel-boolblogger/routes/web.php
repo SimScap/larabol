@@ -33,6 +33,9 @@ Route::get('/test', function(){
     return view('guest.test');
 });
 
+Route::get('/contacts', 'Guest\ContactController@contact')->name('guest.contact');
+Route::post('/contacts', 'Guest\ContactController@contactMailSender')->name('guest.storeContact');
+Route::get('/thanks', 'Guest\ContactController@thanks')->name('guest.thanks');
 
 Route::get('/latest-posts', 'Guest\PostController@index')->name('guest.posts');
 
